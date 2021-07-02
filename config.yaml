@@ -2,6 +2,8 @@ baseURL: "https://runbooks.thaum.xyz"
 languageCode: "en-us"
 title: "kube-prometheus runbooks"
 
+theme: book
+
 params:
   BookRepo: "https://github.com/paulfantom/runbooks"
   BookEditPath: "edit/main"
