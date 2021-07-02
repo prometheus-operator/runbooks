@@ -5,9 +5,33 @@ menu:
     weight: -100
 ---
 
+# Adding new runbook
+
 ## How?
 
-FILL THIS IN
+1. [Figure out alert category from the alert name](#finding-correct-component)
+2. Open a PR with new file placed in correct component subdirectory. You can use
+[links below to open a PR directly](#pr-links)
+3. Name the new file the same as the alert it describes
+4. Fill in the new file following [a template below](#template).
+5. Remember to put alert name at the top of the file
+
+### Finding correct component
+
+All alerts are prefixed with a name of the component. If the alert is not prefixed, it should go into "general"
+component category.
+
+For example `KubeStateMetricsListErrors` suggest it is a kube-state-metrics alert, but `Watchdog` is a "general" one.
+
+### PR links
+
+- [New alertmanager runbook]({{< param BookRepo >}}/new/main/content/runbooks/alertmanager)
+- [New kube-state-metrics runbook]({{< param BookRepo >}}/new/main/content/runbooks/kube-state-metrics)
+- [New kubernetes runbook]({{< param BookRepo >}}/new/main/content/runbooks/kubernetes)
+- [New node runbook]({{< param BookRepo >}}/new/main/content/runbooks/node)
+- [New prometheus runbook]({{< param BookRepo >}}/new/main/content/runbooks/prometheus)
+- [New prometheus-operator runbook]({{< param BookRepo >}}/new/main/content/runbooks/prometheus-operator)
+- [New general runbook]({{< param BookRepo >}}/new/main/content/runbooks/general)
 
 ## Template
 
