@@ -1,4 +1,7 @@
-# Impact
+# KubeAPIErrorBudgetBurn
+
+## Impact
+
 The overall availability of your Kubernetes cluster isn't guaranteed anymore.  
 There may be **too many errors** returned by the APIServer and/or **responses take too long** for guarantee proper reconciliation.
 

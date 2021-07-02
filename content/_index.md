@@ -3,39 +3,27 @@ title: Introduction
 type: docs
 ---
 
-# Acerbo datus maxime
+# Welcome!
 
-{{< columns >}}
-## Astris ipse furtiva
+Welcome to the site hosting runbooks for alerts shipped with
+[kube-prometheus](https://github.com/prometheus-operator/kube-prometheus) project.
 
-Est in vagis et Pittheus tu arge accipiter regia iram vocatur nurus. Omnes ut
-olivae sensit **arma sorori** deducit, inesset **crudus**, ego vetuere aliis,
-modo arsit? Utinam rapta fiducia valuere litora _adicit cursu_, ad facies
+## Reason
 
-<--->
+Kube-prometheus was always meant to provide the complete monitoring solution for kubernetes environments. The project
+already includes a lot of various components to fullfill this goal and one crucial part is including alerting rules.
+However what good are those alerting rules when one don't know what to do when the alert fires?
 
-## Suis quot vota
+## Goal
 
-Ea _furtique_ risere fratres edidit terrae magis. Colla tam mihi tenebat:
-miseram excita suadent es pecudes iam. Concilio _quam_ velatus posset ait quod
-nunc! Fragosis suae dextra geruntur functus vulgata.
-{{< /columns >}}
+We aim to ship meaningful runbook for every alert in kube-prometheus project and provide enough insight to help
+kube-prometheus users during incidents.
 
+## How to contribute?
 
-## Tempora nisi nunc
+If you find any issues with current runbooks, please use the `Edit this page` link at the bottom of the runbook page.
 
-Lorem **markdownum** emicat gestu. Cannis sol pressit ducta. **Est** Idaei,
-tremens ausim se tutaeque, illi ulnis hausit, sed, lumina cutem. Quae avis
-sequens!
+For adding a new runbook please follow [add runbook](/docs/add-runbook) guide.
 
-    var panel = ram_design;
-    if (backup + system) {
-        file.readPoint = network_native;
-        sidebar_engine_device(cell_tftp_raster,
-                dual_login_paper.adf_vci.application_reader_design(
-                graphicsNvramCdma, lpi_footer_snmp, integer_model));
-    }
-
-## Locis suis novi cum suoque decidit eadem
-
-Idmoniae ripis, at aves, ali missa adest, ut _et autem_, et ab?
+If you find any other issues, please [open an issue on GitHub](https://github.com/paulfantom/runbooks/issues/new)
+or ask questions in [prometheus-operator slack channel](https://kubernetes.slack.com/archives/CFFDS2Z7F).

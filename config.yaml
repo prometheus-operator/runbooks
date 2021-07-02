@@ -6,4 +6,6 @@ params:
   BookRepo: "https://github.com/paulfantom/runbooks"
   BookEditPath: "edit/main"
   BookSearch: true
+  BookSection: "runbooks"
+  #BookMenuBundle: "/menu"
 

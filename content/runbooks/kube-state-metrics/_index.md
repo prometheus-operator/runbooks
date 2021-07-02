@@ -1,7 +1,7 @@
 ---
-title: Alertmanager
+title: kube-state-metrics
 bookCollapseSection: true
-weight: 10
 bookFlatSection: true
+weight: 10
 ---
 
