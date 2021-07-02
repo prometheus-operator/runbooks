@@ -1,0 +1,16 @@
+baseURL: "https://runbooks.thaum.xyz"
+languageCode: "en-us"
+title: "kube-prometheus runbooks"
+
+menu:
+  # before: []
+  after:
+    - name: "Add runbook"
+      url: "https://github.com/paulfantom/runbooks/issues/new?assignees=&labels=kind%2Fbug&template=bug.md"
+      weight: 10
+
+params:
+  BookRepo: "https://github.com/paulfantom/runbooks"
+  BookEditPath: "edit/main"
+  BookSearch: true
+

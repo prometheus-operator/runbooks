@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+
+  <head>
+    {{ partial "docs/html-head" . }}
+    {{ partial "docs/inject/head" . }}
+
+    <style>
+      .not-found {
+        text-align: center;
+      }
+      .not-found h1 {
+        margin: .25em 0 0 0;
+        opacity: .25;
+        font-size: 40vmin;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="flex justify-center not-found">
+      <div>
+        <h1>404</h1>
+        <h2>Page Not Found. Don't panic!</h2>
+        <h4>If you were directed here by a link from an alert, we sadly don't have a runbook for it... yet!</h4>
+        <p>All runbooks on this site are created in the open and maintained by a team of passionate people.</p>
+        <p>We would like to have runbooks for all alerts shipped with kube-prometheus, but we sadly don't have time to write them all.</p>
+        <p>If you would like to help us, please consider opening a pull request. Thank you!</p>
+         <h3>
+          <a href="{{ .Site.Params.BookRepo }}/issues/new?template=new-runbook.md">Add runbook</a>
+        </h3>      
+        <h3>
+          <a href="{{ .Site.Home.RelPermalink }}">Back to main page</a>
+        </h3>
+      </div>
+    </main>
+
+    {{ partial "docs/inject/body" . }}
+  </body>
+
+</html>
