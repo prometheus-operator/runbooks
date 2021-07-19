@@ -5,7 +5,7 @@ title: "kube-prometheus runbooks"
 theme: book
 
 params:
-  BookRepo: "https://github.com/paulfantom/runbooks"
+  BookRepo: "https://github.com/prometheus-operator/runbooks"
   BookEditPath: "edit/main"
   BookSearch: true
   BookSection: "runbooks"
