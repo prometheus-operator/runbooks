@@ -36,7 +36,7 @@ _Example: If you have a 99% availability target this means that at the end of 30
 ### Example Queries for slow requests:
 
 Change the rate window according to your `long` label from the alert.  
-Make sure to update the alert threshold too, like `> 0.01` to `> 14.4 * 0.01` for exmaple.
+Make sure to update the alert threshold too, like `> 0.01` to `> 14.4 * 0.01` for example.
 #### Slow Read Requests:
 
 If you don't get any results back then there aren't too many slow requests - that's good.
