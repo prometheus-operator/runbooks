@@ -1,4 +1,4 @@
-baseURL: "https://runbooks.thaum.xyz"
+baseURL: "https://runbooks.prometheus-operator.dev"
 languageCode: "en-us"
 title: "kube-prometheus runbooks"
 
