@@ -25,5 +25,5 @@ If you find any issues with current runbooks, please use the `Edit this page` li
 
 For adding a new runbook please follow [add runbook](/docs/add-runbook) guide.
 
-If you find any other issues, please [open an issue on GitHub](https://github.com/paulfantom/runbooks/issues/new)
+If you find any other issues, please [open an issue on GitHub](https://github.com/prometheus-operator/runbooks/issues/new)
 or ask questions in [prometheus-operator slack channel](https://kubernetes.slack.com/archives/CFFDS2Z7F).
