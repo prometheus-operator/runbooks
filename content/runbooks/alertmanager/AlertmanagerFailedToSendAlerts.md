@@ -1,5 +1,6 @@
 ---
-title: Alertmanager Failed To Send Alerts weight: 20
+title: Alertmanager Failed To Send Alerts
+weight: 20
 ---
 
 # AlertmanagerFailedToSendAlerts
