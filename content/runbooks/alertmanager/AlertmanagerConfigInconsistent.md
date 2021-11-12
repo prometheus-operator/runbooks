@@ -3,7 +3,7 @@ title: Alertmanager ConfigInconsistent
 weight: 20
 ---
 
-# Alertmanager Config Inconsistent
+# AlertmanagerConfigInconsistent
 
 ## Meaning
 
