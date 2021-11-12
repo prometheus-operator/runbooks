@@ -3,7 +3,7 @@ title: Alertmanager Cluster Failed To Send Alerts
 weight: 20
 ---
 
-# Alertmanager Cluster Failed To Send Alerts
+# AlertmanagerClusterFailedToSendAlerts
 
 ## Meaning
 
