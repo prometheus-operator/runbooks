@@ -7,7 +7,7 @@ weight: 20
 
 ## Meaning
 
-All instances failed to send notification to a critical integration. 
+All instances failed to send notification to an integration. 
 
 ## Impact
 
