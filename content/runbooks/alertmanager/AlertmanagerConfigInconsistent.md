@@ -12,7 +12,7 @@ The configuration between instances inside a cluster is inconsistent.
 ## Impact
 
 Configuration inconsistency can be multiple and impact is hard to predict. 
-Nevertheless, most of the case the alert might be lost or routed to the incorrect integration. 
+Nevertheless, in most cases the alert might be lost or routed to the incorrect integration. 
 
 ## Diagnosis
 
