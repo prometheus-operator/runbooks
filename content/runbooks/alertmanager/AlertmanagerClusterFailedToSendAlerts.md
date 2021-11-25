@@ -11,7 +11,7 @@ All instances failed to send notification to an integration.
 
 ## Impact
 
-You will not receive notification when an alert is raised.
+You will not receive a notification when an alert is raised.
 
 ## Diagnosis
 
