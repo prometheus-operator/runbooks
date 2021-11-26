@@ -7,12 +7,12 @@ weight: 20
 
 ## Meaning
 
-At least one worker failed to load the configuration.
+The alert `AlertmanagerFailedReload` is triggered when the Alertmanager instance for the cluster monitoring stack has consistently failed to reload its configuration for a certain period.
 
 ## Impact
 
 The impact depends on the type of the error you will find in the logs.
-Most of the time, previous configuration is still working, so avoid deleting existing pods.  
+Most of the time, previous configuration is still working, thanks to multiple instances, so avoid deleting existing pods.
 
 ## Diagnosis
 
