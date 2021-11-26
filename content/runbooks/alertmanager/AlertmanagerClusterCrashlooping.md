@@ -24,6 +24,12 @@ default     alertmanager-main-1     2/2     Running             0 43d
 default     alertmanager-main-2     2/2     Running             0 43d 
 ```
 
+Find the root cause by looking to events for a given pod/deployement
+
+```
+kubectl get events --field-selector involvedObject.name=alertmanager-main-0
+```
+
 ## Mitigation
 
 Make sure pods have enough resources (CPU, MEM) to work correctly.
