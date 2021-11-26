@@ -7,7 +7,9 @@ weight: 20
 
 ## Meaning
 
-The alert `AlertmanagerFailedReload` is triggered when the Alertmanager instance for the cluster monitoring stack has consistently failed to reload its configuration for a certain period.
+The alert `AlertmanagerFailedReload` is triggered when the Alertmanager instance
+for the cluster monitoring stack has consistently failed to reload its
+configuration for a certain period.
 
 ## Impact
 
