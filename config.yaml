@@ -11,3 +11,8 @@ params:
   BookSection: "runbooks"
   #BookMenuBundle: "/menu"
 
+markup:
+  goldmark:
+    renderer:
+      # Allows rendering HTML tags. This would only be truly "unsafe" if we were accepting untrusted user input and rendering it, which we aren't.
+      unsafe: true

@@ -5,6 +5,15 @@
 This alert fires when the 99th percentile of etcd disk fsync duration is too
 high for 10 minutes.
 
+<details>
+<summary>Full context</summary>
+
+Every write request sent to etcd has to be [fsync'd][fsync] to disk by the leader node, transmitted to its peers, and fsync'd to those disks as well before etcd can tell the client that the write request succeeded (as part of the [Raft consensus algorithm][raft]). As a result of all those fsync's, etcd cares a LOT about disk latency, which this alert picks up on.
+
+Etcd instances perform poorly on network-attached storage. Directly-attached spinning disks may work, but solid-state disks or better [are recommended][etcd-disks] for larger clusters. For very large clusters, you may even consider a [separate etcd cluster just for events][etcd-events] to reduce the write load.
+
+</details>
+
 ## Impact
 
 When this happens it can lead to various scenarios like leader election failure,
@@ -51,5 +60,9 @@ above. More space should be available now.
 Further info on etcd best practices can be found in the [OpenShift docs
 here][etcdPractices].
 
+[fsync]: https://man7.org/linux/man-pages/man2/fsync.2.html
+[raft]: https://en.wikipedia.org/wiki/Raft_(algorithm)#Log_replication
+[etcd-disks]: https://etcd.io/docs/v3.5/op-guide/hardware/#disks
+[etcd-events]: https://github.com/kubernetes/kubernetes/issues/4432
 [etcdDefragmentation]: https://etcd.io/docs/v3.4.0/op-guide/maintenance/
 [etcdPractices]: https://docs.openshift.com/container-platform/4.7/scalability_and_performance/recommended-host-practices.html#recommended-etcd-practices_

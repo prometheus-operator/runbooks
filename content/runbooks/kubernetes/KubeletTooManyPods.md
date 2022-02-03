@@ -1,5 +1,27 @@
 # KubeletTooManyPods
 
-The Kubelet in a Kubernetes cluster is the agent that ensures Pods are running on that host.
 
-Kubelet's have a configuration that limits how many Pods they can run. The default value of this is 110 Pods per Kubelet, but it is configurable (and this alert takes that configuration into account with the `kube_node_status_capacity_pods` metric). The alert fires when a Kubelet reaches 95% of its capacity. This alert warns about the likelihood that the cluster is close to running out of capacity to run Pods on the cluster. Either the cluster must be increased in its node count, or the number of Pods must be reduced.
+## Meaning
+
+The alert fires when a specific node is running >95% of its capacity of pods (110 by default).
+
+<details>
+<summary>Full context</summary>
+
+Kubelets have a configuration that limits how many Pods they can run. The default value of this is 110 Pods per Kubelet, but it is configurable (and this alert takes that configuration into account with the `kube_node_status_capacity_pods` metric).
+
+</details>
+
+## Impact
+
+Running many pods (more than 110) on a single node places a strain on the Container Runtime Interface (CRI), Container Network Interface (CNI), and the operating system itself. Approaching that limit may affect performance and availability of that node.
+
+## Diagnosis
+
+Check the number of pods on a given node by running `kubectl get pods --all-namespaces --field-selector spec.nodeName=<node>`
+
+## Mitigation
+
+Since Kubernetes only officially supports [110 pods per node](https://kubernetes.io/docs/setup/best-practices/cluster-large/), you should preferably move pods onto other nodes or expand your cluster with more worker nodes.
+
+If you're certain the node can handle more pods, you can raise the max pods per node limit by changing `maxPods` in your [KubeletConfiguration](https://kubernetes.io/docs/reference/config-api/kubelet-config.v1beta1/) (for kubeadm-based clusters) or changing the setting in your cloud provider's dashboard (if supported).

@@ -44,6 +44,15 @@ Runbook example based on a NodeFilesystemSpaceFillingUp (thanks to @beorn7):
 
 This alert is based on an extrapolation of the space used in a file system. It fires if both the current usage is above a certain threshold _and_ the extrapolation predicts to run out of space in a certain time. This is a warning-level alert if that time is less than 24h. It's a critical alert if that time is less than 4h.
 
+<details>
+<summary>Full context</summary>
+
+Here is where you can optionally describe some more details about the alert. The "meaning" is the short version for an on-call engineer to quickly read through. The "details" are for learning about the bigger picture or the finer details.
+
+> NOTE: The blank lines above and below the text inside this `<details>` tag are [required to use markdown inside of html tags][1]
+
+</details>
+
 ## Impact
 
 A filesystem running completely full is obviously very bad for any process in need to write to the filesystem. But even before a filesystem runs completely full, performance is usually degrading.
@@ -59,4 +68,21 @@ Is this some irregular condition, e.g. a process fails to clean up behind itself
 ## Mitigation
 
 <Insert site specific measures, for example to grow a persistent volume.>
+
+
+[1]: https://github.github.com/gfm/#html-block
 ```
+
+### Guidelines
+
+The purpose of this repository is to have a documentation about every alert shipped by kube-prometheus (not only by prometheus-operator). In the long run, we are aiming to support as many k8s flavors as possible. If possible try to ensure the 'Diagnosis/Mitigation' sections are applicable to all certified kubernetes distributions.
+
+The primary target for these runbooks are folks who are novices and don't have much insight into what to do with alerts shipped in kube-prometheus. As a result, try to avoid excessive jargon and abbreviations.
+
+### Testing locally
+
+To test your changes locally:
+
+1. Install [Hugo](https://gohugo.io/getting-started/installing/)
+2. Run `git submodule init` and `git submodule update` to clone the Hugo theme
+3. Run `hugo server` and navigate to http://localhost:1313/ in your browser
