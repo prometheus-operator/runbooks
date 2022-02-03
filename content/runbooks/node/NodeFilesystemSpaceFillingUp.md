@@ -8,6 +8,14 @@ extrapolation predicts to run out of space in a certain time. This is a
 warning-level alert if that time is less than 24h. It's a critical alert if that
 time is less than 4h.
 
+<details>
+<summary>Full context</summary>
+
+The filesystem on Kubernetes nodes mainly consists of the operating system, [container ephemeral storage][1], container images, and container logs.
+Since Kubelet automatically handles [cleaning up old logs][2] and [deleting unused images][3], container ephemeral storage is a common cause of this alert. Although this alert may be triggered before Kubelet's garbage collection kicks in.
+
+</details>
+
 ## Impact
 
 A filesystem running full is very bad for any process in need to write to the
@@ -60,3 +68,7 @@ Exit debug:
 $ exit
 $ exit
 ```
+
+[1]: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#local-ephemeral-storage
+[2]: https://kubernetes.io/docs/concepts/cluster-administration/logging/
+[3]: https://kubernetes.io/docs/concepts/architecture/garbage-collection/#containers-images
