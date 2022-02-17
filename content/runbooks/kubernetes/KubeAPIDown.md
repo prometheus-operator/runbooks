@@ -1,3 +1,8 @@
+---
+title: Kube API Down
+weight: 20
+---
+
 # KubeAPIDown
 
 ## Meaning
@@ -9,6 +14,11 @@ been reachable by the monitoring system for more than 15 minutes.
 
 This is a critical alert. The Kubernetes API is not responding. The
 cluster may partially or fully non-functional.
+
+Some apps will work as is but it will be not possible to control resources
+in the cluster.
+
+Services using Kubernetes API directly will probably fail to work.
 
 ## Diagnosis
 
@@ -28,8 +38,16 @@ pods.
 $ kubectl -n kube-system get pods
 $ kubectl -n kube-system logs -l 'app=kube-apiserver'
 ```
+
+Check networking on the node.
+Check firewall on the node.
+Investigate kube proxy logs.
+Investigate NetworkPolicies if prometheus/kubeApi was not filtered out.
+
+
 ## Mitigation
 
 If you can still reach the API server intermittently, you may be able treat this
 like any other failing deployment. If not, it's possible you may have to refer
 to the disaster recovery documentation.
+

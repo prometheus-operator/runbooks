@@ -1,3 +1,8 @@
+---
+title: Kube Node Not Ready
+weight: 20
+---
+
 # KubeNodeNotReady
 
 ## Meaning
@@ -36,4 +41,5 @@ API or kubelet).
 Once, the problem was resolved that prevented node from being replaced,
 the instance should be terminated.
 
-[KubeNode]: https://kubernetes.io/docs/concepts/architecture/nodes/#condition
+See [KubeNode](https://kubernetes.io/docs/concepts/architecture/nodes/#condition)
+See [node problem detector](https://github.com/kubernetes/node-problem-detector)

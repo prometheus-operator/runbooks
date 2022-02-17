@@ -1,5 +1,9 @@
-# KubeletTooManyPods
+---
+title: Kubelet Too Many Pods
+weight: 20
+---
 
+# KubeletTooManyPods
 
 ## Meaning
 

@@ -1,13 +1,13 @@
 ---
-title: Kube Scheduler Down
+title: Kube Controller Manager Down
 weight: 20
 ---
 
-# KubeSchedulerDown
+# KubeControllerManagerDown
 
 ## Meaning
 
-Kube Scheduler has disappeared from Prometheus target discovery.
+KubeControllerManager has disappeared from Prometheus target discovery.
 
 ## Impact
 

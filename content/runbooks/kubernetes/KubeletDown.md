@@ -1,3 +1,8 @@
+---
+title: Kubelet Down
+weight: 20
+---
+
 # KubeletDown
 
 ## Meaning
@@ -36,3 +41,5 @@ $ journalctl -b -f -u kubelet.service
 The mitigation depends on what is causing the Kubelets to become
 unresponsive. Check for wide-spread networking issues, or node level
 configuration issues.
+
+See [Kubernetes Docs - kubelet](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/)
