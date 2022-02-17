@@ -1,5 +1,5 @@
 ---
-title: AlertmanagerFailedReload
+title: Alertmanager Failed Reload
 weight: 20
 ---
 
@@ -14,7 +14,8 @@ configuration for a certain period.
 ## Impact
 
 The impact depends on the type of the error you will find in the logs.
-Most of the time, previous configuration is still working, thanks to multiple instances, so avoid deleting existing pods.
+Most of the time, previous configuration is still working, thanks to multiple
+instances, so avoid deleting existing pods.
 
 ## Diagnosis
 
@@ -31,5 +32,7 @@ You can also verify directly `alertmanager.yaml` file (default: `/etc/alertmanag
 
 ## Mitigation
 
-Running [amtool check-config alertmanager.yaml](https://github.com/prometheus/alertmanager#amtool) on your configuration file will help you detect problem related to syntax.
-You could also rollback `alertmanager.yaml` to the previous version in order to get back to a stable version. 
+Running [amtool check-config alertmanager.yaml](https://github.com/prometheus/alertmanager#amtool)
+on your configuration file will help you detect problem related to syntax.
+You could also rollback `alertmanager.yaml` to the previous version in order
+to get back to a stable version. 

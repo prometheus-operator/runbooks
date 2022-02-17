@@ -1,3 +1,8 @@
+---
+title: etcd No Leader
+weight: 20
+---
+
 # etcdNoLeader
 
 ## Meaning

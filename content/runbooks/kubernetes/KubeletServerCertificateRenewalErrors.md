@@ -7,7 +7,8 @@ weight: 20
 
 ## Meaning
 
-Kubelet on node  has failed to renew its server certificate ({ XX errors in the last 5 minutes)
+Kubelet on node  has failed to renew its server certificate
+(XX errors in the last 5 minutes)
 
 ## Impact
 

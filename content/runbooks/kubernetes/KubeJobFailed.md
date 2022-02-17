@@ -11,7 +11,8 @@ Job failed complete.
 
 ## Impact
 
-Failure of processing of scheduled task such as batch reports, data migrations etc.
+Failure of processing of scheduled task such as batch reports,
+database migrations etc.
 
 ## Diagnosis
 
@@ -23,4 +24,5 @@ Failure of processing of scheduled task such as batch reports, data migrations e
 
 - See [Debugging Pods](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-application/#debugging-pods)
 - See [Job patterns](https://kubernetes.io/docs/tasks/job/)
-- redesign job so that it is idempotent (can be re-run many times which will always produce the same output even if input differes)
+- redesign job so that it is idempotent (can be re-run many times which will
+  always produce the same output even if input differes)

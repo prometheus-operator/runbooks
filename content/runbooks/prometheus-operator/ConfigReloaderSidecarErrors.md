@@ -1,4 +1,9 @@
-# Config Reloader Sidecar Errors
+---
+title: Config Reloader Sidecar Errors
+weight: 20
+---
+
+# ConfigReloaderSidecarErrors
 
 ## Meaning
 

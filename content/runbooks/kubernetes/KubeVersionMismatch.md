@@ -37,6 +37,7 @@ ending at whole cluster stability.
 - Drain affected nodes, then upgrade or replace them with newer ones,
   see [Safely drain node](https://kubernetes.io/docs/tasks/administer-cluster/safely-drain-node/)
 
-- Ensure to set proper control plane version and node pool versions when creating clusters.
+- Ensure to set proper control plane version and node pool versions when
+  creating clusters.
 - Ensure auto cluster updates for control plane and node pools.
 - Set proper maintenance windows for the clusters.

@@ -16,8 +16,8 @@ Some in-cluster services this may degrade or make service unavailable.
 
 ## Diagnosis
 
-Use the `apiserver_flowcontrol_rejected_requests_total` metric to determine which flow schema
-is throttling the traffic to the API Server.
+Use the `apiserver_flowcontrol_rejected_requests_total` metric to determine
+which flow schema is throttling the traffic to the API Server.
 The flow schema also provides information on the affected resources and subjects.
 
 ## Mitigation

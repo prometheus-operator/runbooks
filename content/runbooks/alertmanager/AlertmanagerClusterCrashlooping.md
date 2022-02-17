@@ -7,11 +7,13 @@ weight: 20
 
 ## Meaning
 
-Half or more of the Alertmanager instances within the same cluster are crashlooping.
+Half or more of the Alertmanager instances within the same cluster are
+crashlooping.
 
 ## Impact
 
-Alerts could be notified multiple time unless pods are crashing to fast and no alerts can be sent.
+Alerts could be notified multiple time unless pods are crashing too fast
+and no alerts can be sent.
 
 ## Diagnosis
 

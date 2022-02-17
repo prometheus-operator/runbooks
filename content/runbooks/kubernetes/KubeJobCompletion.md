@@ -15,8 +15,6 @@ Just delayed processing of batch jobs.
 
 ## Diagnosis
 
-Check the job using kubectl describe job <job> and look at the pod logs using kubectl logs <pod> for further information.
-
 - Check job via `kubectl -n $NAMESPACE describe jobs $JOB`.
 - Check pod events via `kubectl -n $NAMESPACE describe job $JOB`.
 

@@ -1,3 +1,8 @@
+---
+title: Prometheus Target Sync Failure
+weight: 20
+---
+
 # PrometheusTargetSyncFailure
 
 ## Meaning

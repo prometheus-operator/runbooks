@@ -1,3 +1,8 @@
+---
+title: Node Filesystem Space Filling Up
+weight: 20
+---
+
 # NodeFilesystemSpaceFillingUp
 
 ## Meaning
@@ -11,8 +16,12 @@ time is less than 4h.
 <details>
 <summary>Full context</summary>
 
-The filesystem on Kubernetes nodes mainly consists of the operating system, [container ephemeral storage][1], container images, and container logs.
-Since Kubelet automatically handles [cleaning up old logs][2] and [deleting unused images][3], container ephemeral storage is a common cause of this alert. Although this alert may be triggered before Kubelet's garbage collection kicks in.
+The filesystem on Kubernetes nodes mainly consists of the operating system,
+[container ephemeral storage][1], container images, and container logs.
+Since Kubelet automatically handles [cleaning up old logs][2] and
+[deleting unused images][3], container ephemeral storage is a common cause of
+this alert. Although this alert may be triggered before Kubelet's garbage
+collection kicks in.
 
 </details>
 

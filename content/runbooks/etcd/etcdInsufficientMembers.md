@@ -1,3 +1,8 @@
+---
+title: etcd Insufficient Members
+weight: 20
+---
+
 # etcdInsufficientMembers
 
 ## Meaning

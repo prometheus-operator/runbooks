@@ -27,11 +27,16 @@ which can be also applied to StatefulSets to some extent
 - Check the status of the pods which belong to the replica sets under the deployment.
 - Check pod template parameters such as:
   - pod priority - maybe it was evicted by other more important pods
-  - resources - maybe it tries to use unavailable resource, such as GPU but there is limited number of nodes with GPU
-  - affinity rules - maybe due to affinities and not enough nodes it is not possible to schedule pods
-  - pod termination grace period - if too long then pods may be for too long in terminating state
-- Check if Horizontal Pod Autoscaler (HPA) is not triggered due to untested values (requests values).
-- Check if cluster-autoscaler is able to create new nodes - see its logs or cluster-autoscaler status configmap.
+  - resources - maybe it tries to use unavailable resource, such as GPU
+    but there is limited number of nodes with GPU
+  - affinity rules - maybe due to affinities and not enough nodes it is
+    not possible to schedule pods
+  - pod termination grace period - if too long then pods may be for too long
+    in terminating state
+- Check if Horizontal Pod Autoscaler (HPA) is not triggered due to untested
+  values (requests values).
+- Check if cluster-autoscaler is able to create new nodes - see its logs or
+  cluster-autoscaler status configmap.
 
 ## Mitigation
 

@@ -16,13 +16,15 @@ menu:
 4. Ensure the file has `.md` extension
 5. Fill in the new file following [a template below](#template).
 6. Remember to put alert name at the top of the file
+7. Please use max 80 chars per line without URLs
 
 ### Finding correct component
 
-All alerts are prefixed with a name of the component. If the alert is not prefixed, it should go into "general"
-component category.
+All alerts are prefixed with a name of the component.
+If the alert is not prefixed, it should go into "general" component category.
 
-For example `KubeStateMetricsListErrors` suggest it is a kube-state-metrics alert, but `Watchdog` is a "general" one.
+For example `KubeStateMetricsListErrors` suggest it is a kube-state-metrics
+alert, but `Watchdog` is a "general" one.
 
 ### PR links
 
@@ -36,35 +38,48 @@ For example `KubeStateMetricsListErrors` suggest it is a kube-state-metrics aler
 
 ## Template
 
-Runbook example based on a NodeFilesystemSpaceFillingUp (thanks to @beorn7):
+Runbook example based on a `NodeFilesystemSpaceFillingUp` (thanks to @beorn7):
 
 ```
 # NodeFilesystemSpaceFillingUp
 
 ## Meaning
 
-This alert is based on an extrapolation of the space used in a file system. It fires if both the current usage is above a certain threshold _and_ the extrapolation predicts to run out of space in a certain time. This is a warning-level alert if that time is less than 24h. It's a critical alert if that time is less than 4h.
+This alert is based on an extrapolation of the space used in a file system.
+It fires if both the current usage is above a certain threshold _and_ the
+extrapolation predicts to run out of space in a certain time.
+This is a warning-level alert if that time is less than 24h.
+It's a critical alert if that time is less than 4h.
 
 <details>
 <summary>Full context</summary>
 
-Here is where you can optionally describe some more details about the alert. The "meaning" is the short version for an on-call engineer to quickly read through. The "details" are for learning about the bigger picture or the finer details.
+Here is where you can optionally describe some more details about the alert.
+The "meaning" is the short version for an on-call engineer to quickly read
+through. The "details" are for learning about the bigger picture or the finer
+details.
 
-> NOTE: The blank lines above and below the text inside this `<details>` tag are [required to use markdown inside of html tags][1]
+> NOTE: The blank lines above and below the text inside this `<details>` tag
+are [required to use markdown inside of html tags][1]
 
 </details>
 
 ## Impact
 
-A filesystem running completely full is obviously very bad for any process in need to write to the filesystem. But even before a filesystem runs completely full, performance is usually degrading.
+A filesystem running completely full is obviously very bad for any process in
+need to write to the filesystem. But even before a filesystem runs completely full, performance is usually degrading.
 
 ## Diagnosis
 
-Study the recent trends of filesystem usage on a dashboard. Sometimes a periodic pattern of writing and cleaning up can trick the linear prediction into a false alert.
+Study the recent trends of filesystem usage on a dashboard.
+Sometimes a periodic pattern of writing and cleaning up can trick the linear
+prediction into a false alert.
 
-Use the usual OS tools to investigate what directories are the worst and/or recent offenders.
+Use the usual OS tools to investigate what directories are the worst and/or
+recent offenders.
 
-Is this some irregular condition, e.g. a process fails to clean up behind itself, or is this organic growth?
+Is this some irregular condition, e.g. a process fails to clean up behind
+itself, or is this organic growth?
 
 ## Mitigation
 
@@ -76,9 +91,15 @@ Is this some irregular condition, e.g. a process fails to clean up behind itself
 
 ### Guidelines
 
-The purpose of this repository is to have a documentation about every alert shipped by kube-prometheus (not only by prometheus-operator). In the long run, we are aiming to support as many k8s flavors as possible. If possible try to ensure the 'Diagnosis/Mitigation' sections are applicable to all certified kubernetes distributions.
+The purpose of this repository is to have a documentation about every alert
+shipped by kube-prometheus (not only by prometheus-operator).
+In the long run, we are aiming to support as many k8s flavors as possible.
+If possible try to ensure the 'Diagnosis/Mitigation' sections are applicable
+to all certified kubernetes distributions.
 
-The primary target for these runbooks are folks who are novices and don't have much insight into what to do with alerts shipped in kube-prometheus. As a result, try to avoid excessive jargon and abbreviations.
+The primary target for these runbooks are folks who are novices and don't have
+much insight into what to do with alerts shipped in kube-prometheus.
+As a result, try to avoid excessive jargon and abbreviations.
 
 ### Testing locally
 

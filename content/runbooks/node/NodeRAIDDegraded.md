@@ -1,3 +1,8 @@
+---
+title: Node RAID Degraded
+weight: 20
+---
+
 # NodeRAIDDegraded
 
 ## Meaning

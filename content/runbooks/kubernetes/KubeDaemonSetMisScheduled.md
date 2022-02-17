@@ -21,13 +21,14 @@ Excessive resource usage where they could be used by other apps.
 - Check the status of the pods which belong to the replica sets under the deployment.
 - Check pod template parameters such as:
   - pod priority - maybe it was evicted by other more important pods
-  - affinity rules - maybe due to affinities and not enough nodes it is not possible to schedule pods
+  - affinity rules - maybe due to affinities and not enough nodes it is not
+    possible to schedule pods
 - Check node taints and labels
 - Check logs for [node-feature-discovery](https://kubernetes-sigs.github.io/node-feature-discovery/master/get-started/index.html)
   and other supporting tools such as gpu-feature-discovery
 
 ## Mitigation
 
-Usually happens when specifying wrong pod nodeSelector/taints/affinities or node (node pools) were tainted
-and existing pods were not scheduled for eviction.
+Usually happens when specifying wrong pod nodeSelector/taints/affinities or
+node (node pools) were tainted and existing pods were not scheduled for eviction.
 Update DaemonSet and apply change, delete pods manually.

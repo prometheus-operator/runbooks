@@ -7,7 +7,8 @@ weight: 20
 
 ## Meaning
 
-The Kubelet Pod Lifecycle Event Generator has a 99th percentile duration of XX seconds on node.
+The Kubelet Pod Lifecycle Event Generator has a 99th percentile duration of
+XX seconds on node.
 
 ## Impact
 

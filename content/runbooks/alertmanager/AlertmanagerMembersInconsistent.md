@@ -13,7 +13,9 @@ At least one of alertmanager cluster members cannot be found.
 
 ## Diagnosis
 
-Check if IP addresses discovered by alertmanager cluster are the same ones as in alertmanager Service. Following example show possible inconsistency in Endpoint IP addresses:
+Check if IP addresses discovered by alertmanager cluster are the same ones as
+in alertmanager Service. Following example show possible inconsistency in
+Endpoint IP addresses:
 
 ```bash
 $ kubectl describe svc alertmanager-main

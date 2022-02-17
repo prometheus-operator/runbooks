@@ -7,11 +7,12 @@ weight: 20
 
 ## Meaning
 
-Half or more of the Alertmanager instances within the same cluster are down. 
+Half or more of the Alertmanager instances within the same cluster are down.
 
 ## Impact
 
-You have an unstable cluster, if everything goes wrong you will lose the whole cluster.
+You have an unstable cluster, if everything goes wrong you will lose
+the whole cluster.
 
 ## Diagnosis
 
@@ -25,4 +26,5 @@ $ kubectl get events --field-selector involvedObject.kind=Pod | grep alertmanage
 ## Mitigation
 
 There are no cheap options to mitigate this risk.
-Verifying any new changes in preprod before production environment should improve stability.  
+Verifying any new changes in preprod before production environment
+should improve stability.  

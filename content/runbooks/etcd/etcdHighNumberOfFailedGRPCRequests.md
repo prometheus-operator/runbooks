@@ -1,3 +1,8 @@
+---
+title: etcd High Number Of Failed GRPC Requests
+weight: 20
+---
+
 # etcdHighNumberOfFailedGRPCRequests
 
 ## Meaning

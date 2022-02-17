@@ -7,7 +7,8 @@ weight: 20
 
 ## Meaning
 
-Horizontal Pod Autoscaler has not matched the desired number of replicas for longer than 15 minutes.
+Horizontal Pod Autoscaler has not matched the desired number of replicas for
+longer than 15 minutes.
 
 HPA was unable to schedule desired number of pods.
 
@@ -25,4 +26,5 @@ Check why HPA was unable to scale:
 
 ## Mitigation
 
-In case of cluster-autoscaler you may need to set up preemtive pod pools to ensure nodes are created on time.
+In case of cluster-autoscaler you may need to set up preemtive pod pools to
+ensure nodes are created on time.

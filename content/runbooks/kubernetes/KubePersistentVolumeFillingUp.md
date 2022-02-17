@@ -38,9 +38,12 @@ then send it to somewhere else, for example to S3 bucket.
 
 ### Data rebalance in the cluster
 
-Some services automatically rebalance data on the cluster when one node fills up.
-Some allow to rebalance data across existing nodes, the other may require adding new nodes.
-If this is supported then increase number of replicas and wait for data migration or trigger it manually.
+Some services automatically rebalance data on the cluster when one node
+fills up. 
+Some allow to rebalance data across existing nodes, the other may require
+adding new nodes.
+If this is supported then increase number of replicas and wait for data
+migration or trigger it manually.
 
 Example services that support this:
 
@@ -52,13 +55,16 @@ Example services that support this:
 - kafka
 - minio
 
-**Notice**: some services may require special scaling conditions such as adding twice more nodes than exist now.
+**Notice**: some services may require special scaling conditions such as
+adding twice more nodes than exist now.
 
 ### Direct Volume resizing
 
-If volume resizing is available, it's easiest to increase the capacity of the volume.
+If volume resizing is available, it's easiest to increase the capacity of
+the volume.
 
-To check if volume expansion is available, run this with your namespace and PVC-name replaced.
+To check if volume expansion is available, run this with your namespace
+and PVC-name replaced.
 
 ```bash
 $ kubectl get storageclass `kubectl -n <my-namespace> get pvc <my-pvc> -ojson | jq -r '.spec.storageClassName'`       
@@ -74,7 +80,9 @@ To resize the volume run:
 $ kubectl -n <my-namespace> edit pvc <my-pvc>
 ```
 
-And edit `.spec.resources.requests.storage` to the new desired storage size. Eventually the PVC status will say "Waiting for user to (re-)start a pod to finish file system resize of volume on node."
+And edit `.spec.resources.requests.storage` to the new desired storage size.
+Eventually the PVC status will say "Waiting for user to (re-)start a pod to
+finish file system resize of volume on node."
 
 You can check this with:
 
@@ -82,7 +90,9 @@ You can check this with:
 $ kubectl -n <my-namespace> get pvc <my-pvc>
 ```
 
-Once the PVC status says to restart the respective pod, run this to restart it (this automatically finds the pod that mounts the PVC and deletes it, if you know the pod name, you can also just simply delete that pod):
+Once the PVC status says to restart the respective pod, run this to restart it
+(this automatically finds the pod that mounts the PVC and deletes it,
+if you know the pod name, you can also just simply delete that pod):
 
 ```bash
 $ kubectl -n <my-namespace> delete pod `kubectl -n <my-namespace> get pod -ojson | jq -r '.items[] | select(.spec.volumes[] .persistentVolumeClaim.claimName=="<my-pvc>") | .metadata.name'`
@@ -90,23 +100,28 @@ $ kubectl -n <my-namespace> delete pod `kubectl -n <my-namespace> get pod -ojson
 
 ### Migrate data to a new, larger volume
 
-When resizing is not available and the data is not safe to be deleted, then the only way is to create a larger volume and migrate the data.
+When resizing is not available and the data is not safe to be deleted,
+then the only way is to create a larger volume and migrate the data.
 
 TODO
 
 
 ### Purge volume
 
-When the data is ephemeral and volume expansion is not available, it may be best to purge the volume.
+When the data is ephemeral and volume expansion is not available,
+it may be best to purge the volume.
 
-**WARNING/DANGER**: This will permanently delete the data on the volume. Performing these steps is your responsibility.
+**WARNING/DANGER**: This will permanently delete the data on the volume.
+Performing these steps is your responsibility.
 
 TODO
 
 ### Migrate data to new, larger instance pool in the same cluster
 
-In very specific scenarios it is better to schedule data migration in the same cluster but to a new instances.
-This is sometimes hard to accomplish due to the way how certain resources are managed in kubernetes.
+In very specific scenarios it is better to schedule data migration in the
+same cluster but to a new instances.
+This is sometimes hard to accomplish due to the way how certain resources
+are managed in kubernetes.
 
 In general procedure is like this:
 
@@ -116,7 +131,8 @@ In general procedure is like this:
 
 ### Migrate data to new, larger cluster
 
-This is most common scenario, but is much more expensive and may be a bit time consuming.
+This is most common scenario, but is much more expensive and may be a bit
+time consuming.
 Also sometimes this causes split brain issues when writing.
 
 In general procedure is like this, this is only a suggestion, though:
@@ -126,6 +142,7 @@ In general procedure is like this, this is only a suggestion, though:
 - start data restore on new cluster based on the snapshot
 - switch old cluster to read only mode
 - reconfigure networking to point to new cluster
-- trigger data migration from old cluster to new cluster to sync difference between snapshot and latest writes
+- trigger data migration from old cluster to new cluster to sync difference
+  between snapshot and latest writes
 - remove old cluster
 

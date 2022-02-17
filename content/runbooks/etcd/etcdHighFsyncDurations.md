@@ -1,3 +1,8 @@
+---
+title: etcd High Fsync Durations
+weight: 20
+---
+
 # etcdHighFsyncDurations
 
 ## Meaning
@@ -8,9 +13,17 @@ high for 10 minutes.
 <details>
 <summary>Full context</summary>
 
-Every write request sent to etcd has to be [fsync'd][fsync] to disk by the leader node, transmitted to its peers, and fsync'd to those disks as well before etcd can tell the client that the write request succeeded (as part of the [Raft consensus algorithm][raft]). As a result of all those fsync's, etcd cares a LOT about disk latency, which this alert picks up on.
+Every write request sent to etcd has to be [fsync'd][fsync] to disk by the
+leader node, transmitted to its peers, and fsync'd to those disks as well
+before etcd can tell the client that the write request succeeded (as part of
+the [Raft consensus algorithm][raft]). As a result of all those fsync's,
+etcd cares a LOT about disk latency, which this alert picks up on.
 
-Etcd instances perform poorly on network-attached storage. Directly-attached spinning disks may work, but solid-state disks or better [are recommended][etcd-disks] for larger clusters. For very large clusters, you may even consider a [separate etcd cluster just for events][etcd-events] to reduce the write load.
+Etcd instances perform poorly on network-attached storage. Directly-attached
+spinning disks may work, but solid-state disks or better
+[are recommended][etcd-disks] for larger clusters. For very large clusters,
+you may even consider a [separate etcd cluster just for events][etcd-events]
+to reduce the write load.
 
 </details>
 
@@ -32,8 +45,8 @@ picture.
 #### PromQL queries used to troubleshoot
 
 `etcd_disk_wal_fsync_duration_seconds_bucket` reports the etcd disk fsync
-duration, `etcd_server_leader_changes_seen_total` reports the leader changes. To
-rule out a slow disk and confirm that the disk is reasonably fast, 99th
+duration, `etcd_server_leader_changes_seen_total` reports the leader changes.
+To rule out a slow disk and confirm that the disk is reasonably fast, 99th
 percentile of the `etcd_disk_wal_fsync_duration_seconds_bucket` should be less
 than 10ms. Query in metrics UI:
 
