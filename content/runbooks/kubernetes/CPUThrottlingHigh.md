@@ -31,7 +31,7 @@ is firing.
 
 **When mixed with other alerts**:
 
-Give specific container in the pod more CPU requests and limits.
+Give specific container in the pod more CPU limits. Requests can stay the same.
 
 In specific cases kubernetes node has too old kernel which is known to have
 issues with assigning CPU resources to the process [see here](https://github.com/kubernetes/kubernetes/issues/67577)
