@@ -23,7 +23,4 @@ Service degradation or unavailability.
 
 ## Mitigation
 
-Usually requires updating controller such as deployment/daemonset/statefulset.
-Ensure sufficient cluster capacity.
-
 See [Container waiting](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-application/#my-pod-stays-waiting)
