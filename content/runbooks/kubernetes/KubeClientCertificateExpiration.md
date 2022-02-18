@@ -7,7 +7,7 @@ weight: 20
 
 ## Meaning
 
-A client certificate used to authenticate to the apiserver is expiring
+A client certificate used to authenticate to the apiserver is expiring in less than 7 days (warning alert) or 24 hours (critical alert).
 
 ## Impact
 
