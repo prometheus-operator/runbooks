@@ -15,7 +15,7 @@ been reachable by the monitoring system for more than 15 minutes.
 This is a critical alert. The Kubernetes API is not responding. The
 cluster may partially or fully non-functional.
 
-Some apps will work as is but it will be not possible to control resources
+Applications, which do not use kubernetes API directly, will continue to work. Changing kubernetes resources is not possible.
 in the cluster.
 
 Services using Kubernetes API directly will start to behave erratically.
