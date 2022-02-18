@@ -16,8 +16,9 @@ Service degradation, data loss.
 
 ## Diagnosis
 
-Check storage provider for logs.
-Check storage quotas in the cloud.
+- Check PV events via `kubectl describe pv $PV`.
+- Check storage provider for logs.
+- Check storage quotas in the cloud.
 
 ## Mitigation
 
