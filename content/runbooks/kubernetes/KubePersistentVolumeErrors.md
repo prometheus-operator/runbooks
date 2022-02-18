@@ -8,9 +8,10 @@ weight: 20
 ## Meaning
 
 PersistentVolume is having issues with provisioning.
-Volue may be unavailable or have data erors (corrupted storage).
 
 ## Impact
+
+Volue may be unavailable or have data erors (corrupted storage).
 
 Service degradation, data loss.
 
