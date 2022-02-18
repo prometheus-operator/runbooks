@@ -16,6 +16,7 @@ the application, it can be skipped.
 
 ## Diagnosis
 
+- Check if application is performing normally
 - Check if CPU resource requests are adjusted accordingly to the app usage
 - Check kernel version in the node
 
