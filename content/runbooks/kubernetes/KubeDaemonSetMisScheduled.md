@@ -16,6 +16,9 @@ Excessive resource usage where they could be used by other apps.
 
 ## Diagnosis
 
+Usually happens when specifying wrong pod nodeSelector/taints/affinities or
+node (node pools) were tainted and existing pods were not scheduled for eviction.
+
 - Check daemonset status via `kubectl -n $NAMESPACE describe daemonset $NAME`.
 - Check [DaemonSet update strategy](https://kubernetes.io/docs/tasks/manage-daemon/update-daemon-set/)
 - Check the status of the pods which belong to the replica sets under the deployment.
@@ -29,6 +32,4 @@ Excessive resource usage where they could be used by other apps.
 
 ## Mitigation
 
-Usually happens when specifying wrong pod nodeSelector/taints/affinities or
-node (node pools) were tainted and existing pods were not scheduled for eviction.
 Update DaemonSet and apply change, delete pods manually.
