@@ -12,7 +12,7 @@ than 15 minutes.
 
 ## Impact
 
-Possible service degradation.
+Horizontal Pod Autoscaler won't be able to add new pods and thus scale application.
 **Notice** for some services maximizing HPA is in fact desired.
 
 ## Diagnosis
