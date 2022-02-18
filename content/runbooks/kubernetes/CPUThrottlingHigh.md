@@ -11,8 +11,8 @@ Processes experience elevated CPU throttling.
 
 ## Impact
 
-This is only info level alert, no action needs to be taken.
-If mixed with other alerts application may experience latency spikes.
+The alert is purely informative and unless there is some other issue with
+the application, it can be skipped.
 
 ## Diagnosis
 
