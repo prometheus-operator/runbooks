@@ -7,11 +7,12 @@ weight: 20
 
 ## Meaning
 
-Given container in the pod is throttled to avoid excessive CPU usage.
+Processes experience elevated CPU throttling.
 
 ## Impact
 
-Usually application latency spikes.
+This is only info level alert, no action needs to be taken.
+If mixed with other alerts application may experience latency spikes.
 
 ## Diagnosis
 
@@ -19,6 +20,16 @@ Usually application latency spikes.
 - Check kernel version in the node
 
 ## Mitigation
+
+**Notice**:
+User shouldn't increase CPU limits unless the application is behaving
+erratically (another alert firing).
+
+For this particular reason, the alert is inhibited by default in
+kube-prometheus and can be sent only if another alert in the same namespace
+is firing.
+
+**When mixed with other alerts**:
 
 Give specific container in the pod more CPU requests and limits.
 
