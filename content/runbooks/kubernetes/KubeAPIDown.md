@@ -39,10 +39,10 @@ $ kubectl -n kube-system get pods
 $ kubectl -n kube-system logs -l 'app=kube-apiserver'
 ```
 
-Check networking on the node.
-Check firewall on the node.
-Investigate kube proxy logs.
-Investigate NetworkPolicies if prometheus/kubeApi was not filtered out.
+- Check networking on the node.
+- Check firewall on the node.
+- Investigate kube proxy logs.
+- Investigate NetworkPolicies if prometheus/kubeApi was not filtered out.
 
 
 ## Mitigation
