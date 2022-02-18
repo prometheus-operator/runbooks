@@ -11,7 +11,7 @@ Cluster has overcommitted CPU resource requests for Namespaces.
 
 ## Impact
 
-Various services degradation or unavailability in case of single node failure.
+In the event of a node failure, some Pods will be in `Pending` state due to a lack of available CPU resources.
 
 ## Diagnosis
 
