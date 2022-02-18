@@ -7,7 +7,7 @@ weight: 20
 
 ## Meaning
 
-The apiserver has terminated XX% of its incoming requests.
+The apiserver has terminated over 20% of its incoming requests.
 
 ## Impact
 
