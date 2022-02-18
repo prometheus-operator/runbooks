@@ -7,7 +7,7 @@ weight: 20
 
 ## Meaning
 
-This alert is similar to the [NodeFilesystemSpaceFillingUp][1] alert, but
+This alert is similar to the NodeFilesystemSpaceFillingUp alert, but
 predicts the filesystem will run out of inodes rather than bytes of storage
 space. The alert fires at a `critical` level when the filesystem is predicted to
 run out of available inodes within four hours.
@@ -26,7 +26,7 @@ Note the `instance` and `mountpoint` labels from the alert. You can graph the
 usage history of this filesystem with the following query in the OpenShift web
 console:
 
-```text
+```promql
 node_filesystem_files_free{
   instance="<value of instance label from alert>",
   mountpoint="<value of mountpoint label from alert>"
@@ -36,7 +36,7 @@ node_filesystem_files_free{
 You can also open a debug session on the node and use the standard Linux
 utilities to locate the source of the usage:
 
-```console
+```shell
 $ MOUNT_POINT='<value of mountpoint label from alert>'
 $ NODE_NAME='<value of instance label from alert>'
 
@@ -55,4 +55,4 @@ size. You may be able to solve the problem, or buy time, by increasing size of
 the storage volume. Otherwise, determine the application that is creating large
 numbers of files and adjust its configuration or provide it dedicated storage.
 
-[1]: ./NodeFilesystemSpaceFillingUp.md
+See [Node Filesystem FilesFilling Up]({{< ref "./NodeFilesystemFilesFillingUp.md" >}})

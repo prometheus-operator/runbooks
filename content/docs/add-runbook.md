@@ -40,7 +40,7 @@ alert, but `Watchdog` is a "general" one.
 
 Runbook example based on a `NodeFilesystemSpaceFillingUp` (thanks to @beorn7):
 
-```
+```text
 # NodeFilesystemSpaceFillingUp
 
 ## Meaning
@@ -85,8 +85,16 @@ itself, or is this organic growth?
 
 <Insert site specific measures, for example to grow a persistent volume.>
 
+Cross referencing other document:
+
+See [Node RAID Degraded]({ {< ref "../runbooks/node/NodeRAIDDegraded.md" >} })
+(remove spaces between curly braces, this was added here to avoid auto-parsing)
+
 
 [1]: https://github.github.com/gfm/#html-block
+
+(Notice urls are not auto processed yet in Hugo.)
+
 ```
 
 ### Guidelines
@@ -105,6 +113,19 @@ As a result, try to avoid excessive jargon and abbreviations.
 
 To test your changes locally:
 
-1. Install [Hugo](https://gohugo.io/getting-started/installing/) - notice `Extended` version
+1. Install [Hugo](https://gohugo.io/getting-started/installing/),
+   notice `Extended` version
 2. Run `git submodule init` and `git submodule update` to clone the Hugo theme
-3. Run `hugo server` and navigate to http://localhost:1313/ in your browser
+3. Run `hugo server` for example as container
+    from the root of the git repo:
+
+    ```shell
+    docker run --rm -it -v $(pwd):/src -p 1313:1313 klakegg/hugo:ext-alpine server
+    ```
+
+    and navigate to [localhost:1313](http://localhost:1313/) in your browser.
+
+4. extra scripts in `hack/` to check links (linux specific):
+
+    - `check_urls.sh`: git + grep + wget
+    - `spider.sh`: [linkcheck](https://github.com/tennox/linkcheck)

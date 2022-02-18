@@ -3,7 +3,7 @@ title: CPU Throttling High
 weight: 20
 ---
 
-# CPUThrottlingHigh
+# CPU Throttling High
 
 ## Meaning
 

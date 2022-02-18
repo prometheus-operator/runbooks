@@ -40,7 +40,7 @@ and/or recent offenders. Is this some irregular condition, e.g. a process fails
 to clean up behind itself or is this organic growth? If monitoring is enabled,
 the following metric can be watched in PromQL.
 
-```console
+```promql
 node_filesystem_free_bytes
 ```
 
@@ -53,7 +53,7 @@ removing unused images solves that issue:
 
 Debug the node by accessing the node filesystem:
 
-```console
+```shell
 $ NODE_NAME=<instance label from alert>
 $ kubectl -n default debug node/$NODE_NAME
 $ chroot /host
@@ -61,23 +61,23 @@ $ chroot /host
 
 Remove dangling images:
 
-```console
+```shell
 # TODO: Command needed
 ```
 
 Remove unused images:
 
-```console
+```shell
 # TODO: Command needed
 ```
 
 Exit debug:
 
-```console
+```shell
 $ exit
 $ exit
 ```
 
-[1]: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#local-ephemeral-storage
-[2]: https://kubernetes.io/docs/concepts/cluster-administration/logging/
-[3]: https://kubernetes.io/docs/concepts/architecture/garbage-collection/#containers-images
+- [1](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#local-ephemeral-storage)
+- [2](https://kubernetes.io/docs/concepts/cluster-administration/logging/)
+- [3](https://kubernetes.io/docs/concepts/architecture/garbage-collection/#containers-images)

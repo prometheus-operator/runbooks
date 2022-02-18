@@ -7,7 +7,7 @@ weight: 20
 
 Find the Prometheus Pod that concerns this.
 
-```bash
+```shell
 $ kubectl -n <namespace> get pod
 prometheus-k8s-0                       2/2     Running   1          122m
 prometheus-k8s-1                       2/2     Running   1          122m
@@ -15,7 +15,7 @@ prometheus-k8s-1                       2/2     Running   1          122m
 
 Look at the logs of each of them, there should be a log line such as:
 
-```bash
+```shell
 $ kubectl -n <namespace> logs prometheus-k8s-0
 level=warn ts=2021-01-04T15:08:55.613Z caller=scrape.go:1372 component="scrape manager" scrape_pool=default/main-ingress-nginx-controller/0 target=http://10.0.7.3:10254/metrics msg="Error on ingesting samples with different value but same timestamp" num_dropped=16
 ```

@@ -16,12 +16,12 @@ but they are relevant when combined with other alerts.
 
 ## Diagnosis
 
-This alert fires whenever there's a severity="info" alert,
-and stops firing when another alert with a severity of 'warning' or
-'critical' starts firing on the same namespace.
+This alert fires whenever there's a `severity="info"` alert,
+and stops firing when another alert with a severity of `warning` or
+`critical` starts firing on the same namespace.
 
 
 ## Mitigation
 
 This alert should be routed to a null receiver and configured to inhibit
-alerts with severity="info".
+alerts with `severity="info"`.

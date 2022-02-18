@@ -26,4 +26,4 @@ Probbaly amout of data sent to remote system is too high
 for given network connectivity speed.
 You may need to limit which metrics to send to minimize transfers.
 
-See [Prometheus Remote Storage Failures](./PrometheusRemoteStorageFailures)
+See [Prometheus Remote Storage Failures]({{< ref "./PrometheusRemoteStorageFailures.md" >}})

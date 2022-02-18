@@ -66,7 +66,7 @@ the volume.
 To check if volume expansion is available, run this with your namespace
 and PVC-name replaced.
 
-```bash
+```shell
 $ kubectl get storageclass `kubectl -n <my-namespace> get pvc <my-pvc> -ojson | jq -r '.spec.storageClassName'`       
 NAME                 PROVISIONER            RECLAIMPOLICY   VOLUMEBINDINGMODE   ALLOWVOLUMEEXPANSION   AGE
 standard (default)   kubernetes.io/gce-pd   Delete          Immediate           true                   28d
@@ -76,7 +76,7 @@ In this case `ALLOWVOLUMEEXPANSION` is true, so we can make use of the feature.
 
 To resize the volume run:
 
-```bash
+```shell
 $ kubectl -n <my-namespace> edit pvc <my-pvc>
 ```
 
@@ -86,7 +86,7 @@ finish file system resize of volume on node."
 
 You can check this with:
 
-```bash
+```shell
 $ kubectl -n <my-namespace> get pvc <my-pvc>
 ```
 
@@ -94,7 +94,7 @@ Once the PVC status says to restart the respective pod, run this to restart it
 (this automatically finds the pod that mounts the PVC and deletes it,
 if you know the pod name, you can also just simply delete that pod):
 
-```bash
+```shell
 $ kubectl -n <my-namespace> delete pod `kubectl -n <my-namespace> get pod -ojson | jq -r '.items[] | select(.spec.volumes[] .persistentVolumeClaim.claimName=="<my-pvc>") | .metadata.name'`
 ```
 
@@ -104,7 +104,6 @@ When resizing is not available and the data is not safe to be deleted,
 then the only way is to create a larger volume and migrate the data.
 
 TODO
-
 
 ### Purge volume
 
@@ -145,4 +144,3 @@ In general procedure is like this, this is only a suggestion, though:
 - trigger data migration from old cluster to new cluster to sync difference
   between snapshot and latest writes
 - remove old cluster
-

@@ -17,7 +17,7 @@ and no alerts can be sent.
 
 ## Diagnosis
 
-```bash
+```shell
 kubectl get pod -l app=alertmanager
 
 NAMESPACE   NAME                    READY   STATUS              RESTARTS    AGE
@@ -28,7 +28,7 @@ default     alertmanager-main-2     2/2     Running             0 43d
 
 Find the root cause by looking to events for a given pod/deployement
 
-```
+```shell
 kubectl get events --field-selector involvedObject.name=alertmanager-main-0
 ```
 

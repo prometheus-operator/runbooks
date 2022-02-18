@@ -50,7 +50,7 @@ To rule out a slow disk and confirm that the disk is reasonably fast, 99th
 percentile of the `etcd_disk_wal_fsync_duration_seconds_bucket` should be less
 than 10ms. Query in metrics UI:
 
-```console
+```promql
 histogram_quantile(0.99, sum by (instance, le) (irate(etcd_disk_wal_fsync_duration_seconds_bucket{job="etcd"}[5m])))
 ```
 
@@ -73,9 +73,9 @@ above. More space should be available now.
 Further info on etcd best practices can be found in the [OpenShift docs
 here][etcdPractices].
 
-[fsync]: https://man7.org/linux/man-pages/man2/fsync.2.html
-[raft]: https://en.wikipedia.org/wiki/Raft_(algorithm)#Log_replication
-[etcd-disks]: https://etcd.io/docs/v3.5/op-guide/hardware/#disks
-[etcd-events]: https://github.com/kubernetes/kubernetes/issues/4432
-[etcdDefragmentation]: https://etcd.io/docs/v3.4.0/op-guide/maintenance/
-[etcdPractices]: https://docs.openshift.com/container-platform/4.7/scalability_and_performance/recommended-host-practices.html#recommended-etcd-practices_
+- [fsync](https://man7.org/linux/man-pages/man2/fsync.2.html)
+- [raft](https://en.wikipedia.org/wiki/Raft_(algorithm)#Log_replication)
+- [etcd-disks](https://etcd.io/docs/v3.5/op-guide/hardware/#disks)
+- [etcd-events](https://github.com/kubernetes/kubernetes/issues/4432)
+- [etcdDefragmentation](https://etcd.io/docs/v3.4.0/op-guide/maintenance/)
+- [etcdPractices](https://docs.openshift.com/container-platform/4.7/scalability_and_performance/recommended-host-practices.html#recommended-etcd-practices_)

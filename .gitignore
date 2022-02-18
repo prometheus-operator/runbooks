@@ -2,3 +2,4 @@ public/
 resources/
 .hugo_build.lock
 hack/kps/
+hack/run.log

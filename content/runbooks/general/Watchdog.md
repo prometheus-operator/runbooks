@@ -25,4 +25,4 @@ Check alertmanager logs.
 
 There are integrations with various notification
 mechanisms that send a notification when this alert is not firing.
-For example the "DeadMansSnitch" integration in PagerDuty.
+For example the `DeadMansSnitch` integration in PagerDuty.

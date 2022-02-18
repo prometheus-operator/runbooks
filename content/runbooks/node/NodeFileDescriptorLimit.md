@@ -22,7 +22,7 @@ node.
 You can open a shell on the node and use the standard Linux utilities to
 diagnose the issue:
 
-```console
+```shell
 $ NODE_NAME='<value of instance label from alert>'
 
 $ oc debug "node/$NODE_NAME"

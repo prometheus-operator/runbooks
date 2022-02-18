@@ -31,7 +31,7 @@ and availability of that node.
 
 Check the number of pods on a given node by running:
 
-```console
+```shell
 kubectl get pods --all-namespaces --field-selector spec.nodeName=<node>
 ```
 

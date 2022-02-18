@@ -28,7 +28,7 @@ diagnosis.
 Login to the cluster. Check health of master nodes if any of them is in
 `NotReady` state or not.
 
-```console
+```shell
 $ kubectl get nodes -l node-role.kubernetes.io/master=
 ```
 
@@ -37,21 +37,22 @@ $ kubectl get nodes -l node-role.kubernetes.io/master=
 To run `etcdctl` commands, we need to `exec` into the `etcdctl` container of any
 etcd pod.
 
-```console
+```shell
 $ kubectl exec -c etcdctl -n openshift-etcd $(kubectl get po -l app=etcd -oname -n openshift-etcd | awk -F"/" 'NR==1{ print $2 }')
 ```
 
 Validate that the `etcdctl` command is available:
 
-```console
+```shell
 $ etcdctl version
 ```
 
 Run the following command to get the health of etcd:
 
-```console
+```shell
 $ etcdctl endpoint health -w table
 ```
+
 ## Mitigation
 
 ### Disaster and recovery
@@ -64,7 +65,5 @@ In the case when you are running on AWS, the AWS instance retirement might need
 a manual reboot of the master node.
 
 As a last resort if none of the above fix the issue and the alert is still
-firing, for etcd specific issues follow the steps described in the [disaster and
-recovery dkubectls](dkubectls).
-
-[dkubectls]:(https://dkubectls.openshift.com/container-platform/4.7/backup_and_restore/disaster_recovery/about-disaster-recovery.html).
+firing, for etcd specific issues follow the steps described in the
+[disaster-recovery](https://docs.openshift.com/container-platform/4.7/backup_and_restore/control_plane_backup_and_restore/disaster_recovery/about-disaster-recovery.html).

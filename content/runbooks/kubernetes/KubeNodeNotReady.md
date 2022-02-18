@@ -29,7 +29,7 @@ The notification details should list the node that's not ready. For Example:
 
 Login to the cluster. Check the status of that node:
 
-```console
+```shell
 $ kubectl get node $NODE -o yaml
 ```
 

@@ -27,7 +27,7 @@ The notification details should list the node that's not reachable. For Example:
 
 Login to the cluster. Check the status of that node:
 
-```console
+```shell
 $ kubectl get node $NODE -o yaml
 ```
 
@@ -50,4 +50,3 @@ In other cases ensure storage and networking redundancy if applicable.
 See [KubeNode](https://kubernetes.io/docs/concepts/architecture/nodes/#condition)
 See [node problem detector](https://github.com/kubernetes/node-problem-detector)
 See [Watchdog timer](https://en.wikipedia.org/wiki/Watchdog_timer)
-

@@ -27,20 +27,20 @@ The following two approaches can be used for the diagnosis.
 To run `etcdctl` commands, we need to `rsh` into the `etcdctl` container of any
 etcd pod.
 
-```console
+```shell
 $ NAMESPACE="kube-etcd"
 $ kubectl rsh -c etcdctl -n $NAMESPACE $(kubectl get po -l app=etcd -oname -n $NAMESPACE | awk -F"/" 'NR==1{ print $2 }')
 ```
 
 Validate that the `etcdctl` command is available:
 
-```console
+```shell
 $ etcdctl version
 ```
 
 `etcdctl` can be used to fetch the DB size of the etcd endpoints.
 
-```console
+```shell
 $ etcdctl endpoint status -w table
 ```
 
@@ -49,13 +49,13 @@ $ etcdctl endpoint status -w table
 Check the percentage consumption of etcd DB with the following query in the
 metrics console:
 
-```console
+```promql
 (etcd_mvcc_db_total_size_in_bytes / etcd_server_quota_backend_bytes) * 100
 ```
 
 Check the DB size in MB that can be reduced after defragmentation:
 
-```console
+```promql
 (etcd_mvcc_db_total_size_in_bytes - etcd_mvcc_db_total_size_in_use_in_bytes)/1024/1024
 ```
 
@@ -72,15 +72,13 @@ In the meantime before migration happens, you can use defrag to gain some time.
 ### Defrag
 
 When the etcd DB size increases, we can defragment existing etcd DB to optimize
-DB consumption as described in [here][etcdDefragmentation]. Run the following
-command in all etcd pods.
+DB consumption as described in [etcdDefragmentation](https://etcd.io/dkubectls/v3.4.0/op-guide/maintenance/).
+Run the following command in all etcd pods.
 
-```console
+```shell
 $ etcdctl defrag
 ```
 
 As validation, check the endpoint status of etcd members to know the reduced
 size of etcd DB. Use for this purpose the same diagnostic approaches as listed
 above. More space should be available now.
-
-[etcdDefragmentation]: https://etcd.io/dkubectls/v3.4.0/op-guide/maintenance/

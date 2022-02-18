@@ -26,7 +26,7 @@ Check the status of the API server targets in the Prometheus UI.
 
 Then, confirm whether the API is also unresponsive for you:
 
-```console
+```shell
 $ kubectl cluster-info
 ```
 
@@ -34,7 +34,7 @@ If you can still reach the API server, there may be a network issue between the
 Prometheus instances and the API server pods. Check the status of the API server
 pods.
 
-```console
+```shell
 $ kubectl -n kube-system get pods
 $ kubectl -n kube-system logs -l 'app=kube-apiserver'
 ```
@@ -50,4 +50,3 @@ Investigate NetworkPolicies if prometheus/kubeApi was not filtered out.
 If you can still reach the API server intermittently, you may be able treat this
 like any other failing deployment. If not, it's possible you may have to refer
 to the disaster recovery documentation.
-

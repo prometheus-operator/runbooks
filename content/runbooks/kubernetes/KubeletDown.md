@@ -23,7 +23,7 @@ debugging tools are likely not functional, e.g. `kubectl exec` and `kubectl logs
 Check the status of nodes and for recent events on `Node` objects, or for recent
 events in general:
 
-```console
+```shell
 $ kubectl get nodes
 $ kubectl describe node $NODE_NAME
 $ kubectl get events --field-selector 'involvedObject.kind=Node'
@@ -32,7 +32,7 @@ $ kubectl get events
 
 If you have SSH access to the nodes, access the logs for the Kubelet directly:
 
-```console
+```shell
 $ journalctl -b -f -u kubelet.service
 ```
 

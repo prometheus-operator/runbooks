@@ -5,5 +5,4 @@ weight: 20
 
 # NodeRAIDDiskFailure
 
-
-See NodeRAIDDegraded
+See [Node RAID Degraded]({{< ref "./NodeRAIDDegraded.md" >}})

@@ -19,7 +19,7 @@ the whole cluster.
 Verify why pods are not running.
 You can get a big picture with `events`.
 
-```bash
+```shell
 $ kubectl get events --field-selector involvedObject.kind=Pod | grep alertmanager
 ```
 

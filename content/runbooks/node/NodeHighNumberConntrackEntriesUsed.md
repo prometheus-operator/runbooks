@@ -7,7 +7,7 @@ weight: 20
 
 ## Meaning
 
-Number of conntrack are getting close to the limit.[](link)
+Number of conntrack are getting close to the limit.
 
 ## Impact
 

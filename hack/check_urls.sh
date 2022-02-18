@@ -9,7 +9,7 @@ URL_PATHS=$(grep -R "runbook_url:" kps/charts/kube-prometheus-stack | grep .yaml
 ENDPOINT=${ENDPOINT:-"http://localhost:1313/runbooks"}
 
 exit_code=0
-echo "Checking urls... please wait"
+echo "Checking runbook urls... please wait"
 
 for runbook in $URL_PATHS; do
   if ! curl --output /dev/null --silent --head --fail "${ENDPOINT}${runbook}"; then

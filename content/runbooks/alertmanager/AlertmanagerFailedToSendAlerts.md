@@ -24,7 +24,7 @@ For exemple the following query will display the number of failed
 notifications per instance for pager duty integration.
 We have 3 instances involved in the example bellow.
 
-```
+```promql
 rate(alertmanager_notifications_total{integration="pagerduty"}[5m])
 ```
 
@@ -36,6 +36,6 @@ rate(alertmanager_notifications_total{integration="pagerduty"}[5m])
 Depending on the integration, you can have a look to alert-manager logs
 and act (network, authorization token, firewall...)
 
-```console
+```shell
 kubectl -n monitoring logs -l 'alertmanager=main' -c alertmanager
 ```
