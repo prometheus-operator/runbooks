@@ -12,7 +12,7 @@ A client certificate used to authenticate to the apiserver is expiring in less t
 ## Impact
 
 Client will not be able to interact with the cluster.
-Sor in cluster services this may degrade or make service unavailable.
+In cluster services communicating with Kubernetes API may degrade or become unavailable.
 
 ## Diagnosis
 
