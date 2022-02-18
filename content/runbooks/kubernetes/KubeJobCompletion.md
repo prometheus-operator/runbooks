@@ -11,7 +11,8 @@ Job is taking more than 1h to complete.
 
 ## Impact
 
-Just delayed processing of batch jobs.
+- Long processing of batch jobs.
+- Possible issues with scheduling next Job
 
 ## Diagnosis
 
