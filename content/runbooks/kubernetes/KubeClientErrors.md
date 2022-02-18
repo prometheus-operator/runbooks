@@ -7,7 +7,7 @@ weight: 20
 
 ## Meaning
 
-Kubernetes API server client is experiencing some errors.
+Kubernetes API server client is experiencing over 1% error rate in the last 15 minutes.
 
 ## Impact
 
