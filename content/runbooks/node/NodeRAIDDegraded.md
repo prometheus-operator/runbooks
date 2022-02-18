@@ -7,6 +7,8 @@ weight: 20
 
 ## Meaning
 
+RAID Array is degraded.
+
 This alert is triggered when a node has a storage configuration with RAID array,
 and the array is reporting as being in a degraded state due to one or more disk
 failures.
@@ -30,6 +32,8 @@ $ cat /proc/mdstat
 ```
 
 ## Mitigation
+
+Cordon and drain node if possible, proceed to RAID recovery.
 
 See the Red Hat Enterprise Linux [documentation][1] for potential steps.
 
