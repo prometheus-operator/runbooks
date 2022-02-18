@@ -11,8 +11,7 @@ Job failed complete.
 
 ## Impact
 
-Failure of processing of scheduled task such as batch reports,
-database migrations etc.
+Failure of processing of a scheduled task.
 
 ## Diagnosis
 
