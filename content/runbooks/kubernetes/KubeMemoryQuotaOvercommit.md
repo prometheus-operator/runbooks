@@ -1,22 +1,15 @@
 ---
-title: Kube Memory Overcommit
+title: Kube Memory Quota Overcommit
 weight: 20
+aliases:
+  - /kubememquotaovercommit/
 ---
 
-# KubeMemOvercommit
+# KubeMemoryQuotaOvercommit
 
 ## Meaning
 
-Cluster has overcommitted Memory resource requests for Pods
-and cannot tolerate node failure.
-
-<details>
-<summary>Full context</summary>
-
-Total number of Memory requests for pods exceeds cluster capacity.
-In case of node failure some pods will not fit in the remaining nodes.
-
-</details>
+Cluster has overcommitted memory resource requests for Namespaces.
 
 ## Impact
 
@@ -27,8 +20,11 @@ Various services degradation or unavailability in case of single node failure.
 - Check if Memory resource requests are adjusted to the app usage
 - Check if some nodes are available and not cordoned
 - Check if cluster-autoscaler has issues with adding new nodes
+- Check if the given namespace usage grows in time more than expected
 
 ## Mitigation
+
+- Review existing quota for given namespace and adjust it accordingly.
 
 - Add more nodes to the cluster - usually it is better to have more smaller
   nodes, than few bigger.
