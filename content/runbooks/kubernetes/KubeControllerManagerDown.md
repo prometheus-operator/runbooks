@@ -11,7 +11,14 @@ KubeControllerManager has disappeared from Prometheus target discovery.
 
 ## Impact
 
-This is a critical alert. The cluster may partially or fully non-functional.
+The cluster is not functional and Kubernetes resources cannot be reconciled.
+
+<details>
+<summary>Full context</summary>
+
+More about kube-controller-manager function can be found at https://kubernetes.io/docs/reference/command-line-tools-reference/kube-controller-manager/
+
+</details>
 
 ## Diagnosis
 
