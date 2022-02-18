@@ -18,7 +18,7 @@ cluster may partially or fully non-functional.
 Some apps will work as is but it will be not possible to control resources
 in the cluster.
 
-Services using Kubernetes API directly will probably fail to work.
+Services using Kubernetes API directly will start to behave erratically.
 
 ## Diagnosis
 
