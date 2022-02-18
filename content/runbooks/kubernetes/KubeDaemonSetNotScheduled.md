@@ -15,6 +15,9 @@ Service degradation or unavailability.
 
 ## Diagnosis
 
+Usually happens when specifying wrong pod taints/affinities or lack of
+resources on the nodes.
+
 - Check daemonset status via `kubectl -n $NAMESPACE describe daemonset $NAME`.
 - Check [DaemonSet update strategy](https://kubernetes.io/docs/tasks/manage-daemon/update-daemon-set/)
 - Check the status of the pods which belong to the replica sets under the deployment.
@@ -31,15 +34,12 @@ Service degradation or unavailability.
 
 ## Mitigation
 
-Usually happens when specifying wrong pod taints/affinities or lack of
-resources on the nodes.
 Set proper priority class for important dameonsets to system-node-critical.
 
 See [DaemonSet rolling update is stuck](https://kubernetes.io/docs/tasks/manage-daemon/update-daemon-set/#daemonset-rolling-update-is-stuck)
 
 In some rare cases you may need to change node affinities or delete pod
-manually if this is special daemonset
-which has pod priority class system-cluster-critical and is limited to only
-1 replica (so it runs on specific node only)
+manually if this is special daemonset which has specific pod priority class
+and is limited to only 1 replica (so it runs on specific node only)
 
 See [Debugging Pods](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-application/#debugging-pods)
