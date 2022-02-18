@@ -7,7 +7,7 @@ weight: 20
 
 ## Meaning
 
-Cluster has overcommitted CPU resource requests for Namespaces.
+Cluster has overcommitted CPU resource requests for Namespaces and cannot tolerate node failure.
 
 ## Impact
 
