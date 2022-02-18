@@ -22,7 +22,7 @@ More about kube-controller-manager function can be found at https://kubernetes.i
 
 ## Diagnosis
 
-To be added.
+TODO
 
 ## Mitigation
 
