@@ -20,7 +20,7 @@ In case of node failure some pods will not fit in the remaining nodes.
 
 ## Impact
 
-Various services degradation or unavailability in case of single node failure.
+The cluster cannot tolerate node failure. In the event of a node failure, some Pods will be in `Pending` state.
 
 ## Diagnosis
 
