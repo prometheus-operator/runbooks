@@ -8,7 +8,7 @@ weight: 20
 ## Meaning
 
 Kubernetes aggregated API has reported errors.
-It has appeared unavailable X times averaged over the past 10m.
+It has appeared unavailable over 4 times averaged over the past 10m.
 
 ## Impact
 
