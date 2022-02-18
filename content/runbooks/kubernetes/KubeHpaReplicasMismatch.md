@@ -10,11 +10,9 @@ weight: 20
 Horizontal Pod Autoscaler has not matched the desired number of replicas for
 longer than 15 minutes.
 
-HPA was unable to schedule desired number of pods.
-
 ## Impact
 
-Possible service degradation.
+HPA was unable to schedule desired number of pods.
 
 ## Diagnosis
 
