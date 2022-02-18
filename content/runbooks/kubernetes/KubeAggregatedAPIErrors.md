@@ -17,11 +17,11 @@ unable to use custom metrics to scale or even unable to use cluster.
 
 ## Diagnosis
 
-Check networking on the node.
-Check firewall on the node.
-Investigate additional API logs.
-Investigate NetworkPolicies if kubeApi - additional API was not filtered out.
-Investigate NetworkPolicies if prometheus/additional api was not filtered out.
+- Check networking on the node.
+- Check firewall on the node.
+- Investigate additional API logs.
+- Investigate NetworkPolicies if kubeApi - additional API was not filtered out.
+- Investigate NetworkPolicies if prometheus/additional API was not filtered out.
 
 ## Mitigation
 
