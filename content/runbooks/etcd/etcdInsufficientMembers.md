@@ -4,12 +4,16 @@
 
 This alert fires when there are fewer instances available than are needed by
 etcd to be healthy.
+This means that etcd cluster has not enough members in the cluster to create quorum.
 
 ## Impact
 
 When etcd does not have a majority of instances available the Kubernetes and
 OpenShift APIs will reject read and write requests and operations that preserve
 the health of workloads cannot be performed.
+
+In general loosing quorum will switch etcd to read only, which effectively renders k8s api read only.
+It is possible to read the current state, but not possible to update it.
 
 ## Diagnosis
 
