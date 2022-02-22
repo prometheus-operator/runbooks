@@ -7,7 +7,7 @@ weight: 20
 
 ## Meaning
 
-Errors while reconciling Prometheus.
+Errors while reconciling information about kubernetes nodes.
 
 ## Impact
 
