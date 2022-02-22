@@ -21,3 +21,5 @@ Prometheus Operator is not able to configure Prometheus scrape configuration.
 $ kubelet describe Service -n kube-system -l app.kubernetes.io/managed-by=prometheus-operator
 
 ## Mitigation
+
+TODO
