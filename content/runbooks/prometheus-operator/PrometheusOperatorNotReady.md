@@ -15,8 +15,8 @@ Prometheus Operator is not able to perform any operation.
 
 ## Diagnosis
 
-Check logs of Prometheus Operator pod.
-Check service account tokens.
-Check prometehus operator configs.
+- Check Prometheus Operator Deployment configuration.
+- Check logs of Prometheus Operator pod.
+- Check service account tokens.
 
 ## Mitigation
