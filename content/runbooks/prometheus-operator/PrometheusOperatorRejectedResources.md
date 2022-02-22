@@ -7,7 +7,7 @@ weight: 20
 
 ## Meaning
 
-Resources rejected by Prometheus operator.
+Custom Resources managed by Prometheus Operator were rejected and not propagated to operands (prometheus, alertmanager).
 
 ## Impact
 
