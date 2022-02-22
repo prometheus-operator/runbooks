@@ -17,7 +17,7 @@ but they are relevant when combined with other alerts.
 ## Diagnosis
 
 This alert fires whenever there's a `severity="info"` alert,
-and stops firing when another alert with a severity of `warning` or
+and stops firing when another alert with severity of `warning` or
 `critical` starts firing on the same namespace.
 
 
