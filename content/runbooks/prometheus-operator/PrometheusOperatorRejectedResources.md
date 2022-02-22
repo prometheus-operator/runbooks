@@ -11,7 +11,7 @@ Custom Resources managed by Prometheus Operator were rejected and not propagated
 
 ## Impact
 
-Prometheus Operator will denied to manage Prometheuses/Alertmanagers.
+Custom Resource won't be used by prometheus-operator and thus configuration it carries won't be translated to prometheus or alertmanager configuration. 
 
 ## Diagnosis
 
