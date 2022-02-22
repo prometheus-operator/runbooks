@@ -24,4 +24,4 @@ and stops firing when another alert with a severity of `warning` or
 ## Mitigation
 
 This alert should be routed to a null receiver and configured to inhibit
-alerts with `severity="info"`.
+alerts with `severity="info"`. Such configuration is available at https://github.com/prometheus-operator/kube-prometheus/blob/main/manifests/alertmanager-secret.yaml
