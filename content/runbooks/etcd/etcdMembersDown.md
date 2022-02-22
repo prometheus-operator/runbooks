@@ -21,7 +21,7 @@ becomes unrecoverable.
 Login to the cluster. Check health of master nodes if any of them is in
 `NotReady` state or not.
 
-```console
+```shell
 $ kubectl get nodes -l node-role.kubernetes.io/master=
 ```
 
@@ -32,7 +32,7 @@ node, this alert can be triggered as well. We can check if the
 the master nodes. This is the case when the [machine-config-operator
 (MCO)](https://github.com/openshift/machine-config-operator) is working on it.
 
-```console
+```shell
 $ kubectl get nodes -l node-role.kubernetes.io/master= -o template --template='{{range .items}}{{"===> node:> "}}{{.metadata.name}}{{"\n"}}{{range $k, $v := .metadata.annotations}}{{println $k ":" $v}}{{end}}{{"\n"}}{{end}}'
 ```
 
@@ -41,19 +41,19 @@ $ kubectl get nodes -l node-role.kubernetes.io/master= -o template --template='{
 To run `etcdctl` commands, we need to `exec` into the `etcdctl` container of any
 etcd pod.
 
-```console
+```shell
 $ kubectl exec -c etcdctl -n openshift-etcd $(kubectl get po -l app=etcd -oname -n openshift-etcd | awk -F"/" 'NR==1{ print $2 }')
 ```
 
 Validate that the `etcdctl` command is available:
 
-```console
+```shell
 $ etcdctl version
 ```
 
 Run the following command to get the health of etcd:
 
-```console
+```shell
 $ etcdctl endpoint health -w table
 ```
 
@@ -65,4 +65,3 @@ check the cloud provider to verify if the master node instances are running or n
 
 In the case when you are running on AWS, the AWS instance retirement might need
 a manual reboot of the master node.
-
