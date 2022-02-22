@@ -11,7 +11,7 @@ Errors while performing list operations in controller.
 
 ## Impact
 
-Prometheus Operator will not be able to manage Prometheuses/Alertmanagers.
+Prometheus Operator has troubles in managing its operands and Custom Resources.
 
 ## Diagnosis
 
