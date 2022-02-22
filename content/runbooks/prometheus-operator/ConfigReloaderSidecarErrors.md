@@ -17,7 +17,7 @@ stale and cannot be automatically updated.'
 
 ## Diagnosis
 
-Check config-reloader logs, and the app which it tries to manage.
+Check config-reloader logs and the configuration which it tries to reload.
 
 ## Mitigation
 
