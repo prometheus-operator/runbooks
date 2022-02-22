@@ -11,7 +11,7 @@ Prometheus operator is not ready.
 
 ## Impact
 
-Prometheus Operator will not be able to manage Prometheuses/Alertmanagers.
+Prometheus Operator is not able to perform any operation.
 
 ## Diagnosis
 
