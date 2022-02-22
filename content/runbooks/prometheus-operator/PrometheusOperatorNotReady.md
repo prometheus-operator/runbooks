@@ -7,7 +7,7 @@ weight: 20
 
 ## Meaning
 
-Prometheus operator not ready
+Prometheus operator is not ready.
 
 ## Impact
 
