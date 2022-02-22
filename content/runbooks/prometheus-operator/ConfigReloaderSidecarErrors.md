@@ -8,7 +8,7 @@ weight: 20
 ## Meaning
 
 Errors encountered while the config-reloader sidecar attempts to sync
-config in given namespace.
+configuration in a given namespace.
 
 ## Impact
 
