@@ -22,7 +22,7 @@ Check config-reloader logs and the configuration which it tries to reload.
 ## Mitigation
 
 Usually means new config was rejected by the controlled app because it contains
-errors such as unknown configuraction sections, bad resource definitions.
+errors such as unknown configuration sections or bad resource definitions.
 
 You can prevent such issues with better config testing tools in CI/CD systems
 such as:
