@@ -14,6 +14,8 @@ but they are relevant when combined with other alerts.
           
 ## Impact
 
+Alert does not have any impact and it is used only as a workaround to a missing feature in alertmanager.
+
 ## Diagnosis
 
 This alert fires whenever there's a `severity="info"` alert,
