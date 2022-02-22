@@ -12,8 +12,8 @@ configuration in a given namespace.
 
 ## Impact
 
-As a result, configuration for service such as prometheus-operator may be
-stale and cannot be updated anymore.'
+As a result, configuration for services such as prometheus or alertmanager maybe
+stale and cannot be automatically updated.'
 
 ## Diagnosis
 
