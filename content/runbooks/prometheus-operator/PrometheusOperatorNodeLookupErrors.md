@@ -11,7 +11,7 @@ Errors while reconciling information about kubernetes nodes.
 
 ## Impact
 
-Prometheus Operator will not be able to manage Prometheuses/Alertmanagers.
+Prometheus Operator is not able to configure Prometheus scrape configuration.
 
 ## Diagnosis
 
