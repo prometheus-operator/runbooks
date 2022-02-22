@@ -15,8 +15,7 @@ Custom Resource won't be used by prometheus-operator and thus configuration it c
 
 ## Diagnosis
 
-Check newly created resources like Prometheus or ALertManager, Rules, Probes, ServiceMonitors and so on.
-Check logs of Prometheus Operator pod.
-Check service account tokens.
+- Check newly created Custom Resources like Prometheus, Alertmanager, Rules, Probes, ServiceMonitors, and others that have a CRD used by Prometheus Operator.
+- Check logs of Prometheus Operator pod.
 
 ## Mitigation
