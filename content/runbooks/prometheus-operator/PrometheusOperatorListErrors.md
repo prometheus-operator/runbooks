@@ -15,7 +15,8 @@ Prometheus Operator has troubles in managing its operands and Custom Resources.
 
 ## Diagnosis
 
-Check logs of Prometheus Operator pod.
-Check service account tokens.
+- Check logs of Prometheus Operator pod.
+- Check service account tokens.
+- Check Prometheus Operator RBAC configuration.
 
 ## Mitigation
