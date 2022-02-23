@@ -15,7 +15,8 @@ Missing metrics from additional scripts.
 
 ## Diagnosis
 
-TODO
+- Check node_exporter logs
+- Check script supervisor (like systemd or cron) for more information about failed script execution
 
 ## Mitigation
 
