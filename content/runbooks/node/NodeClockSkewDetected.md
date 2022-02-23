@@ -11,7 +11,7 @@ Clock skew detected.
 
 ## Impact
 
-Node instability, apps disconencting.
+Time is skewed on the node. This can cause issues with handling TLS as well as problems with other time-sensitive applications.
 
 ## Diagnosis
 
