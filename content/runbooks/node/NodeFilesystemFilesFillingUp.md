@@ -55,4 +55,4 @@ size. You may be able to solve the problem, or buy time, by increasing size of
 the storage volume. Otherwise, determine the application that is creating large
 numbers of files and adjust its configuration or provide it dedicated storage.
 
-See [Node Filesystem FilesFilling Up]({{< ref "./NodeFilesystemFilesFillingUp.md" >}})
+See [Node Filesystem FilesFilling Up]({{< ref "./NodeFilesystemFilesFillingUp.md" >}}) for additional mitigation steps.
