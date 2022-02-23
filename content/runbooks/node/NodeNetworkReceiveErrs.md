@@ -21,4 +21,12 @@ Check physical cables, check networking firewall rules and so on.
 
 ## Mitigation
 
-Cordon and drain node to migrate apps from it.
+In general mitigation landscape is quite vast, some suggestions:
+
+- Ensure some node capacity is left unallocated (cpu/memory) for handling
+networking.
+- [Increase TX queue length](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/13/html/ovs-dpdk_end_to_end_troubleshooting_guide/high_packet_loss_in_the_tx_queue_of_the_instance_s_tap_interface)
+- Spread services to other nodes/pods.
+- Replace physical cables, change ports.
+- Look into introducting Quality of Service or other
+[TCP congestion avoidance algorithms](https://en.wikipedia.org/wiki/TCP_congestion_control)
