@@ -11,7 +11,7 @@ Clock not synchronising.
 
 ## Impact
 
-Node instability, apps disconencting.
+Time is not automatically synchronizing on the node. This can cause issues with handling TLS as well as problems with other time-sensitive applications.
 
 ## Diagnosis
 
