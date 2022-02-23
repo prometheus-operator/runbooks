@@ -11,7 +11,7 @@ Node Exporter text file collector failed to scrape.
 
 ## Impact
 
-TODO
+Missing metrics from additional scripts.
 
 ## Diagnosis
 
