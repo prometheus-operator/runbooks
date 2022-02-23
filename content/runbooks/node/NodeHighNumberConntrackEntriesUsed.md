@@ -21,5 +21,4 @@ Check which apps are generating a lot of connections.
 ## Mitigation
 
 Migrate some pods to another nodes.
-Bump conntrack limit directly on the node.
-Update provisioning scripts to do the same on node start.
+Bump conntrack limit directly on the node, remembering to make it persistent across node reboots.
