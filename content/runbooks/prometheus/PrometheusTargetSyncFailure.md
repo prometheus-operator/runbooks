@@ -1,3 +1,8 @@
+---
+title: Prometheus Target Sync Failure
+weight: 20
+---
+
 # PrometheusTargetSyncFailure
 
 ## Meaning
@@ -16,7 +21,7 @@ inspecting the alert's `namespace` label.
 
 Check the logs for the appropriate Prometheus instance:
 
-```console
+```shell
 $ NAMESPACE='<value of namespace label from alert>'
 
 $ oc -n $NAMESPACE logs -l 'app=prometheus'
