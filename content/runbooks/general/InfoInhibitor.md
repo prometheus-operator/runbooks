@@ -17,6 +17,7 @@ but they are relevant when combined with other alerts.
 
 More information about the alert and design considerations can be found in a [kube-prometheus issue](https://github.com/prometheus-operator/kube-prometheus/issues/861)
 </details>
+
 ## Impact
 
 Alert does not have any impact and it is used only as a workaround to a missing feature in alertmanager.
@@ -26,7 +27,6 @@ Alert does not have any impact and it is used only as a workaround to a missing 
 This alert fires whenever there's a `severity="info"` alert,
 and stops firing when another alert with severity of `warning` or
 `critical` starts firing on the same namespace.
-
 
 ## Mitigation
 
