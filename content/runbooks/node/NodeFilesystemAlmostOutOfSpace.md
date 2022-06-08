@@ -23,4 +23,4 @@ Refer to the [NodeFilesystemSpaceFillingUp][1] runbook.
 
 Refer to the [NodeFilesystemSpaceFillingUp][1] runbook.
 
-[1]: ./NodeFilesystemSpaceFillingUp.md
+[1]: ../NodeFilesystemSpaceFillingUp
