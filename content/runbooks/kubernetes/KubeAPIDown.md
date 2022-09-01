@@ -26,7 +26,7 @@ pods.
 
 ```console
 $ kubectl -n kube-system get pods
-$ kubectl -n kube-system logs -l 'app=kube-apiserver'
+$ kubectl -n kube-system logs -l 'component=kube-apiserver'
 ```
 ## Mitigation
 
