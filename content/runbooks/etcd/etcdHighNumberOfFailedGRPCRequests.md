@@ -2,7 +2,7 @@
 
 ## Meaning
 
-This alert fires when at least 50% of etcd gRPC requests failed in the past 10
+This alert fires when at least 5% of etcd gRPC requests failed in the past 10
 minutes.
 
 ## Impact
