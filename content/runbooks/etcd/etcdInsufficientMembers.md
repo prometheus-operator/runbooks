@@ -17,9 +17,9 @@ It is possible to read the current state, but not possible to update it.
 
 ## Diagnosis
 
-This can kubectlcur multiple control plane nodes are powered off or are unable to
-connect each other via the network. Check that all control plane nodes are
-powered and that network connections between each machine are functional.
+This can occur when multiple control plane nodes are powered off or are unable to
+connect to each other via the network. Check that all control plane nodes are
+powered on and that network connections between each machine are functional.
 
 Check any other critical, warning or info alerts firing that can assist with the
 diagnosis.
