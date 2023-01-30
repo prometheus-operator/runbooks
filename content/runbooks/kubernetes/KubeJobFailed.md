@@ -25,13 +25,11 @@ https://kubernetes.io/docs/concepts/workloads/controllers/job/#handling-pod-and-
 
 Errors shown by the Pod should be resolved, or some reconfiguration of the task the Pod runs may need to be set up so that it exits with a successful return code. 
 
-You may want to re-run the Job.  If created from a Cronjob, you can do this like so:
-  
-    kubectl create job --from=cronjob/<name of cronjob> <name of job>
-
-
 Failed Jobs should be removed, after reviewing the logs.  This will clean up the failed pods.  https://kubernetes.io/docs/concepts/workloads/controllers/job/#job-termination-and-cleanup
 
 Finished/Terminated pods can also be set to be cleaned up automatically, see https://kubernetes.io/docs/concepts/workloads/controllers/job/#clean-up-finished-jobs-automatically
 
+You may want to re-run the Job.  If created from a Cronjob, you can do this like so:
+  
+    kubectl create job --from=cronjob/<name of cronjob> <name of job>
 
