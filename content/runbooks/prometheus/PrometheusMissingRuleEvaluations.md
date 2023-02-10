@@ -2,7 +2,7 @@
 
 ## Meaning
 
-Alert fires when prometheus rule_group evaluation takes consistently longer than rule_group interval.
+Alert fires when Prometheus [`rule_group`](https://prometheus.io/docs/prometheus/latest/configuration/recording_rules/#rule_group) evaluation takes consistently longer than [`rule_group`'s `interval`](https://prometheus.io/docs/prometheus/latest/configuration/recording_rules/#rule_group).
 
 ## Impact
 
