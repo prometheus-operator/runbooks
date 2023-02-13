@@ -2,7 +2,7 @@
 
 ## Meaning
 
-This alert fires when at least 50% of etcd gRPC requests failed in the past 10
+This alert fires when at least 5% of etcd gRPC requests failed in the past 10
 minutes.
 
 ## Impact
@@ -11,7 +11,7 @@ First establish which gRPC method is failing, this will be visible in the alert.
 If it's not part of the alert, the following query will display method and etcd
 instance that has failing requests:
 
-```sh
+```promql
 100 * sum without(grpc_type, grpc_code)
 (rate(grpc_server_handled_total{grpc_code=~"Unknown|FailedPrecondition|ResourceExhausted|Internal|Unavailable|DataLoss|DeadlineExceeded",job="etcd"}[5m]))
 / sum without(grpc_type, grpc_code)
@@ -29,7 +29,7 @@ into what is wrong.
 To get logs of etcd containers either check the instance from the alert and
 check logs directly or run the following:
 
-```sh
+```shell
 NAMESPACE="kube-etcd"
 kubectl logs -n $NAMESPACE -lapp=etcd etcd
 ```

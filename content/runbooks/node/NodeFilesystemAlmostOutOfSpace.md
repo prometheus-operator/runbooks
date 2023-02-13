@@ -1,8 +1,13 @@
+---
+title: Node Filesystem Almost Out Of Space
+weight: 20
+---
+
 # NodeFilesystemAlmostOutOfSpace
 
 ## Meaning
 
-This alert is similar to the [NodeFilesystemSpaceFillingUp][1] alert, but rather
+This alert is similar to the NodeFilesystemSpaceFillingUp alert, but rather
 than being based on a prediction that a filesystem will become full in a certain
 amount of time, it uses simple static thresholds. The alert will fire as at a
 `warning` level at 5% space left, and at a `critical` level with 3% space left.
@@ -17,10 +22,6 @@ of the cluster.
 
 ## Diagnosis
 
-Refer to the [NodeFilesystemSpaceFillingUp][1] runbook.
-
 ## Mitigation
 
-Refer to the [NodeFilesystemSpaceFillingUp][1] runbook.
-
-[1]: ./NodeFilesystemSpaceFillingUp.md
+See [Node Filesystem FilesFilling Up]({{< ref "./NodeFilesystemFilesFillingUp.md" >}})

@@ -23,9 +23,10 @@ related metrics and dashboards should provide a more clear picture.
 Verify the value of how slow the etcd gRPC requests are by using the following
 query in the metrics console:
 
-```console
+```promql
 histogram_quantile(0.99, sum(rate(grpc_server_handling_seconds_bucket{job=~".*etcd.*", grpc_type="unary"}[5m])) without(grpc_type))
 ```
+
 That result should give a rough timeline of when the issue started.
 
 `etcd_disk_wal_fsync_duration_seconds_bucket` reports the etcd disk fsync
@@ -34,9 +35,10 @@ rule out a slow disk and confirm that the disk is reasonably fast, 99th
 percentile of the `etcd_disk_wal_fsync_duration_seconds_bucket` should be less
 than 10ms. Query in metrics UI:
 
-```console
+```promql
 histogram_quantile(0.99, sum by (instance, le) (irate(etcd_disk_wal_fsync_duration_seconds_bucket{job="etcd"}[5m])))
 ```
+
 #### Console dashboards
 
 In the OpenShift dashboard console under Observe section, select the etcd
@@ -59,7 +61,7 @@ To confirm this is the cause of the slow requests either:
 
 2. PromQL query is the following to see top consumers of CPU:
 
-```console
+```promql
       topk(25, sort_desc(
         sum by (namespace) (
           (
@@ -79,7 +81,8 @@ To confirm this is the cause of the slow requests either:
 
 In the case of slow fisk or when the etcd DB size increases, we can defragment
 existing etcd DB to optimize DB consumption as described in
-[here][etcdDefragmentation]. Run the following command in all etcd pods.
+[etcdDefragmentation](https://etcd.io/docs/v3.4.0/op-guide/maintenance/).
+Run the following command in all etcd pods.
 
 ```console
 $ etcdctl defrag
@@ -89,8 +92,4 @@ As validation, check the endpoint status of etcd members to know the reduced
 size of etcd DB. Use for this purpose the same diagnostic approaches as listed
 above. More space should be available now.
 
-Further info on etcd best practices can be found in the [OpenShift docs
-here][etcdPractices].
-
-[etcdDefragmentation]: https://etcd.io/docs/v3.4.0/op-guide/maintenance/
-[etcdPractices]: https://docs.openshift.com/container-platform/4.7/scalability_and_performance/recommended-host-practices.html#recommended-etcd-practices_
+Further info on etcd best practices can be found in the [etcdPractices](https://docs.openshift.com/container-platform/4.7/scalability_and_performance/recommended-host-practices.html#recommended-etcd-practices).
