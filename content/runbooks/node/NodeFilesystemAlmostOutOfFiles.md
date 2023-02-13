@@ -1,8 +1,13 @@
+---
+title: Node Filesystem Almost Out Of Files
+weight: 20
+---
+
 # NodeFilesystemAlmostOutOfFiles
 
 ## Meaning
 
-This alert is similar to the [NodeFilesystemSpaceFillingUp][1] alert, but rather
+This alert is similar to the NodeFilesystemSpaceFillingUp alert, but rather
 than being based on a prediction that a filesystem will run out of inodes in a
 certain amount of time, it uses simple static thresholds. The alert will fire as
 at a `warning` level at 5% of available inodes left, and at a `critical` level
@@ -18,10 +23,8 @@ of the cluster.
 
 ## Diagnosis
 
-Refer to the [NodeFilesystemFilesFillingUp][1] runbook.
 
 ## Mitigation
 
-Refer to the [NodeFilesystemFilesFillingUp][1] runbook.
+See [Node Filesystem FilesFilling Up]({{< ref "./NodeFilesystemFilesFillingUp.md" >}})
 
-[1]: ./NodeFilesystemFilesFillingUp.md
