@@ -1,3 +1,8 @@
+---
+title: Kubelet Down
+weight: 20
+---
+
 # KubeletDown
 
 ## Meaning
@@ -18,7 +23,7 @@ debugging tools are likely not functional, e.g. `kubectl exec` and `kubectl logs
 Check the status of nodes and for recent events on `Node` objects, or for recent
 events in general:
 
-```console
+```shell
 $ kubectl get nodes
 $ kubectl describe node $NODE_NAME
 $ kubectl get events --field-selector 'involvedObject.kind=Node'
@@ -27,7 +32,7 @@ $ kubectl get events
 
 If you have SSH access to the nodes, access the logs for the Kubelet directly:
 
-```console
+```shell
 $ journalctl -b -f -u kubelet.service
 ```
 
@@ -36,3 +41,5 @@ $ journalctl -b -f -u kubelet.service
 The mitigation depends on what is causing the Kubelets to become
 unresponsive. Check for wide-spread networking issues, or node level
 configuration issues.
+
+See [Kubernetes Docs - kubelet](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/)
