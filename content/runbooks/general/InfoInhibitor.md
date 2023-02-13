@@ -28,7 +28,6 @@ This alert fires whenever there's a `severity="info"` alert,
 and stops firing when another alert with severity of `warning` or
 `critical` starts firing on the same namespace.
 
-
 ## Mitigation
 
 This alert should be routed to a null receiver and configured to inhibit
