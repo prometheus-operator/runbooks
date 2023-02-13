@@ -1,0 +1,17 @@
+# PrometheusOperatorSyncFailed
+
+## Meaning
+
+There were problems with Prometheus components synchronization that is usually done by prometheus-operator.
+
+## Impact
+
+New changes promoted to prometheus-operator can not be deployed or there could be some problems with auto-healing.
+
+## Diagnosis
+
+Check prometheus-operator pods logs by running, ex. `kubect logs -f <name_of_pod> -n <name_of_namespace>`
+
+## Mitigation
+
+Any fixes in configuration diagnosed by reviewing prometheus-operator logs.
