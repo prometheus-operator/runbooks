@@ -27,6 +27,6 @@ Check why HPA was unable to scale:
 If using basic metrics like CPU/Memory then ensure to set proper values for
 `requests`.
 For memory based scaling ensure there are no memory leaks.
-If using custom metrics then tine tune how app scales accordingly to it.
+If using custom metrics then fine tune how app scales accordingly to it.
 
 Use performance tests to see how the app scales.
