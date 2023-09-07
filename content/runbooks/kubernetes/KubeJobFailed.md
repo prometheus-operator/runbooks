@@ -24,4 +24,4 @@ Failure of processing of a scheduled task.
 - See [Debugging Pods](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-application/#debugging-pods)
 - See [Job patterns](https://kubernetes.io/docs/tasks/job/)
 - redesign job so that it is idempotent (can be re-run many times which will
-  always produce the same output even if input differes)
+  always produce the same output even if input differs)
