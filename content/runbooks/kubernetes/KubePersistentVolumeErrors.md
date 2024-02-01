@@ -11,7 +11,7 @@ PersistentVolume is having issues with provisioning.
 
 ## Impact
 
-Volue may be unavailable or have data erors (corrupted storage).
+Volume may be unavailable or have data erors (corrupted storage).
 
 Service degradation, data loss.
 
