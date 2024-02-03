@@ -3,7 +3,7 @@ title: Prometheus Remote Write Behind
 weight: 20
 ---
 
-# PrometheusRemoteStorageFailures
+# PrometheusRemoteWriteBehind
 
 ## Meaning
 
