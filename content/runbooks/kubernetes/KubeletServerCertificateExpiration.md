@@ -17,11 +17,9 @@ Server certificate for Kubelet on node expires soon or already expired.
 
 Check when certificate was issued and when it expires.
 
+Check the pending csr with `kubectl get csr`
+
 ## Mitigation
+If there's any csr regarding to the node, verify the csr manually, approve the csr with command `kubectl certificate approve <csr-id>`
 
-Update certificates in the cluster control nodes and the worker nodes.
-Refer to the documentation of the tool used to create cluster.
-
-Another option is to delete node if it affects only one,
-
-In extreme situations recreate cluster.
+Please notice that server certificate is not automatically approved for security reason, see [document](https://kubernetes.io/docs/reference/access-authn-authz/kubelet-tls-bootstrapping/#certificate-rotation) for detail.
