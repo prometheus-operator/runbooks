@@ -1,5 +1,6 @@
 ---
 title: NodeMemoryMajorPagesFaults
+weight: 20
 ---
 
 ## Meaning
