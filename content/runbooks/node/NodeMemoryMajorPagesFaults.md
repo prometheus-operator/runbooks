@@ -3,7 +3,10 @@ title: NodeMemoryMajorPagesFaults
 weight: 20
 ---
 
+# NodeMemoryMajorPagesFaults
+
 ## Meaning
+
 Memory major pages are occurring at very high rate at {{ $labels.instance }}, 500 major page faults per second for the last 15 minutes, is currently at {{ printf "%.2f" $value }}.
 Please check that there is enough memory available at this instance.
 
