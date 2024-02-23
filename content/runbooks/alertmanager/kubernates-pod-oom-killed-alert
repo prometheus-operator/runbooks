@@ -1,0 +1,11 @@
+# PodOOMKilledAlert
+
+## Meaning
+
+This alert is based on an alerting when the pods gets restarted due to the reason OOM Killed
+
+<details>
+<summary>OOM Killed</summary>
+* Pods will gets restrated with many reasons. One of them would be the OOM Killed.
+* OOM Killed :  It occurs when there is a shortage of memory in the Pod to process the messages or task.
+</details>
