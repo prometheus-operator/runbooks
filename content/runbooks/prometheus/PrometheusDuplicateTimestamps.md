@@ -31,4 +31,18 @@ Now there is a judgement call to make, this could be the result of:
   restarting the target, or it might need to be fixed in code of the offending
   application.
 
+You can use the script below to find duplicated metrics:
+
+```
+#!/bin/bash
+
+# get metrics for analyse
+curl http://10.0.7.3:10254/metrics > webpage.txt
+
+awk '{print $1}' webpage.txt | sort | uniq -d | while read line; do
+    echo "duplicatedmetric: $line"
+    grep "$line" webpage.txt
+done
+```
+
 Further reading [blog](https://www.robustperception.io/debugging-out-of-order-samples)
