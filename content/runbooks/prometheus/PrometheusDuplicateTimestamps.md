@@ -29,6 +29,6 @@ Now there is a judgement call to make, this could be the result of:
 
 * The target is reporting faulty data, sometimes this can be resolved by
   restarting the target, or it might need to be fixed in code of the offending
-  application.
+  application (for example, duplicated metrics with same labels).
 
 Further reading [blog](https://www.robustperception.io/debugging-out-of-order-samples)
