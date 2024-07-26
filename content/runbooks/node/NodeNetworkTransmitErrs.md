@@ -16,7 +16,7 @@ Network attached storage performance issues or even data loss.
 
 ## Diagnosis
 
-Investigate networkng issues on the node and to connected hardware.
+Investigate networking issues on the node and to connected hardware.
 Check network interface saturation.
 Check CPU usage saturation.
 Check physical cables, check networking firewall rules and so on.
@@ -30,5 +30,5 @@ networking.
 - [Increase TX queue length](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/13/html/ovs-dpdk_end_to_end_troubleshooting_guide/high_packet_loss_in_the_tx_queue_of_the_instance_s_tap_interface)
 - Spread services to other nodes/pods.
 - Replace physical cables, change ports.
-- Look into introducting Quality of Service or other
+- Look into introducing Quality of Service or other
 [TCP congestion avoidance algorithms](https://en.wikipedia.org/wiki/TCP_congestion_control)
