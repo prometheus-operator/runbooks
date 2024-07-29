@@ -1,13 +1,13 @@
 ---
-title: Kube Job Completion
+title: Kube Job Not Completed
 weight: 20
 ---
 
-# KubeJobCompletion
+# KubeJobNotCompleted
 
 ## Meaning
 
-Job is taking more than 1h to complete.
+Job is taking more than 12h to complete.
 
 ## Impact
 
@@ -17,7 +17,7 @@ Job is taking more than 1h to complete.
 ## Diagnosis
 
 - Check job via `kubectl -n $NAMESPACE describe jobs $JOB`.
-- Check pod events via `kubectl -n $NAMESPACE describe job $JOB`.
+- Check the pod logs using `kubectl -n $NAMESPACE logs $POD_FROM_JOB` for further information.
 
 ## Mitigation
 
