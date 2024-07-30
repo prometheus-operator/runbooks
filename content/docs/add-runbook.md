@@ -13,8 +13,9 @@ menu:
 2. Open a PR with new file placed in correct component subdirectory. You can use
 [links below to open a PR directly](#pr-links)
 3. Name the new file the same as the alert it describes
-4. Fill in the new file following [a template below](#template).
-5. Remember to put alert name at the top of the file
+4. Ensure the file has `.md` extension
+5. Fill in the new file following [a template below](#template).
+6. Remember to put alert name at the top of the file
 
 ### Finding correct component
 
@@ -37,7 +38,7 @@ For example `KubeStateMetricsListErrors` suggest it is a kube-state-metrics aler
 
 Runbook example based on a NodeFilesystemSpaceFillingUp (thanks to @beorn7):
 
-```
+```text
 # NodeFilesystemSpaceFillingUp
 
 ## Meaning
@@ -69,8 +70,16 @@ Is this some irregular condition, e.g. a process fails to clean up behind itself
 
 <Insert site specific measures, for example to grow a persistent volume.>
 
+Cross referencing other document:
+
+See [Node RAID Degraded]({ {< ref "../runbooks/node/NodeRAIDDegraded.md" >} })
+(remove spaces between curly braces, this was added here to avoid auto-parsing)
+
 
 [1]: https://github.github.com/gfm/#html-block
+
+(Notice urls are not auto processed yet in Hugo.)
+
 ```
 
 ### Guidelines
@@ -83,6 +92,19 @@ The primary target for these runbooks are folks who are novices and don't have m
 
 To test your changes locally:
 
-1. Install [Hugo](https://gohugo.io/getting-started/installing/)
+1. Install [Hugo](https://gohugo.io/getting-started/installing/),
+   notice `Extended` version
 2. Run `git submodule init` and `git submodule update` to clone the Hugo theme
-3. Run `hugo server` and navigate to http://localhost:1313/ in your browser
+3. Run `hugo server` for example as container
+    from the root of the git repo:
+
+    ```shell
+    docker run --rm -it -v $(pwd):/src -p 1313:1313 klakegg/hugo:ext-alpine server
+    ```
+
+    and navigate to [localhost:1313](http://localhost:1313/) in your browser.
+
+4. extra scripts in `hack/` to check links (linux specific):
+
+    - `check_urls.sh`: git + grep + wget
+    - `spider.sh`: [linkcheck](https://github.com/tennox/linkcheck)
