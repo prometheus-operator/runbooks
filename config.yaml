@@ -1,11 +1,11 @@
-baseURL: "https://runbooks.prometheus-operator.dev"
+baseURL: "https://runbook.tools.internal.promptly.health/"
 languageCode: "en-us"
-title: "kube-prometheus runbooks"
+title: "Promptly alerts runbooks"
 
 theme: book
 
 params:
-  BookRepo: "https://github.com/prometheus-operator/runbooks"
+  BookRepo: "https://github.com/promptlylabs/runbooks"
   BookEditPath: "edit/main"
   BookSearch: true
   BookSection: "runbooks"
