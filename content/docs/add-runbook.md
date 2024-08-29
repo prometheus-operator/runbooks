@@ -83,6 +83,8 @@ The primary target for these runbooks are folks who are novices and don't have m
 
 To test your changes locally:
 
-1. Install [Hugo](https://gohugo.io/getting-started/installing/)
-2. Run `git submodule init` and `git submodule update` to clone the Hugo theme
-3. Run `hugo server` and navigate to http://localhost:1313/ in your browser
+1. Run `git submodule update --init --remote` to clone the Hugo theme.
+2. Either use [Nix](https://nixos.org/) or install required tools locally:
+   1. Install [Nix](https://nixos.org/download/) (command is `sh <(curl -L https://nixos.org/nix/install)` on MacOS) and run `nix-shell --run $SHELL` - first run will take a while.
+   2. Install [Hugo](https://gohugo.io/getting-started/installing/).
+3. Run `hugo server` and navigate to `http://localhost:1313/` in your browser
