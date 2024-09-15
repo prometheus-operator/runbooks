@@ -23,6 +23,10 @@ of the cluster.
 
 ## Diagnosis
 
+- Check the current inode usage by running the command `df -i`. This will show you the inode usage for all mounted file systems. Identify the file system(s) that are running low on inodes.
+- Identify the directories that are consuming the most inodes by running the command `sudo find <directory> -xdev -type f | cut -d "/" -f 2 | sort | uniq -c | sort -n`. Replace <directory> with the path to the directory that you want to check. This command will show you the number of files in each directory under <directory>.
+- Check if there are any unnecessary or temporary files that can be deleted to free up some inodes. You can use the command `sudo find <directory> -type f -mtime +<n> -print` to find files that haven't been modified in the last <n> days. Replace <directory> with the path to the directory that you want to search and <n> with the number of days that you want to search back.
+
 
 ## Mitigation
 
