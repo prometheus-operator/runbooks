@@ -9,7 +9,7 @@ weight: 20
 
 KubeNodeNotReady alert is fired when a Kubernetes node is not in `Ready`
 state for a certain period. In this case, the node is not able to host any new
-pods as described [here][KubeNode].
+pods as described [here](https://kubernetes.io/docs/concepts/architecture/nodes/#condition).
 
 ## Impact
 
@@ -41,5 +41,5 @@ API or kubelet).
 Once, the problem was resolved that prevented node from being replaced,
 the instance should be terminated.
 
-See [KubeNode](https://kubernetes.io/docs/concepts/architecture/nodes/#condition)
-See [node problem detector](https://github.com/kubernetes/node-problem-detector)
+* See [KubeNode](https://kubernetes.io/docs/concepts/architecture/nodes/#condition)
+* See [node problem detector](https://github.com/kubernetes/node-problem-detector)
