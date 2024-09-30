@@ -16,7 +16,7 @@ Network attached storage performance issues or even data loss.
 
 ## Diagnosis
 
-Investigate networkng issues on the node and to connected hardware.
+Investigate networking issues on the node and to connected hardware.
 Check physical cables, check networking firewall rules and so on.
 
 ## Mitigation
