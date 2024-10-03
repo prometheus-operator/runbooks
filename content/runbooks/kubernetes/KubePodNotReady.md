@@ -15,7 +15,7 @@ State Pending means pod can not be created for specific namespace and node.
 <details>
 <summary>Full context</summary>
 
-Pod failed to reach reay state, depending on the readiness/liveness probes.
+Pod failed to reach ready state, depending on the readiness/liveness probes.
 See [pod-lifecycle](https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/)
 
 </details>
