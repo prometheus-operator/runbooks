@@ -50,6 +50,8 @@ Other things to check:
 - lack of special container capabilities (securityContext)
 - app is executed in different directory than expected
   (for example WORKDIR from Docerkfile is not used in OpenShift)
+- if the something can't be scheduled due to Node Port Conflict
+  use `kubectl get svc -o wide` to check who else is binding the port
 
 ## Mitigation
 
