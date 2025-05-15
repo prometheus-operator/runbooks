@@ -15,7 +15,7 @@ Metrics and alerts may be missing or inaccurate.
 
 ## Diagnosis
 
-Check which rules fail, try to calcuate them differently.
+Check which rules fail, try to calculate them differently.
 
 ## Mitigation
 
