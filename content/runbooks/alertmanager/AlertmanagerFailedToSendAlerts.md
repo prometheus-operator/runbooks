@@ -22,7 +22,7 @@ a specific integration.
 You can look metrics exposed in prometheus console using promQL.
 For exemple the following query will display the number of failed
 notifications per instance for pager duty integration.
-We have 3 instances involved in the example bellow.
+We have 3 instances involved in the example below.
 
 ```promql
 rate(alertmanager_notifications_total{integration="pagerduty"}[5m])
