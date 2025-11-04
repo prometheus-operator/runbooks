@@ -22,7 +22,7 @@ Check configs and credentials.
 
 ## Mitigation
 
-Probbaly amout of data sent to remote system is too high
+Probably amount of data sent to remote system is too high
 for given network connectivity speed.
 You may need to limit which metrics to send to minimize transfers.
 
