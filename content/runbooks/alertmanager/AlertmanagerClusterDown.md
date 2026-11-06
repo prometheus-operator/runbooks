@@ -1,6 +1,6 @@
 ---
 title: Alertmanager Cluster Down
-weight: 20
+weight: 100
 ---
 
 # AlertmanagerClusterDown
