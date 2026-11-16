@@ -19,4 +19,4 @@ TODO
 
 ## Mitigation
 
-See [Node Clok Skew Detected]({{< ref "./NodeClockSkewDetected.md" >}}) for mitigation steps.
+See [Node Clock Skew Detected]({{< ref "./NodeClockSkewDetected.md" >}}) for mitigation steps.
