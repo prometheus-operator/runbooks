@@ -21,7 +21,7 @@ TODO
 
 Ensure time synchronization service is running.
 Set proper time servers.
-Esure to sync time on server start, especially when using
+Ensure to sync time on server start, especially when using
 low power mode or hibernation.
 
 Some resource consuming process can cause issues on given hardware,
